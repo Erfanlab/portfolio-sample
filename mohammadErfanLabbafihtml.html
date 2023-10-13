@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+      <!-- Apple/Safari icon -->
+      <link rel="icon" type="image/png" sizes="64x64" href="https://quera.org/static/images/logo/logo.2-37f748b73943.svg">
+    
+      <link rel="apple-touch-icon" sizes="180x180" href="https://quera.org/static/images/logo/logo.2-37f748b73943.svg">
+      <!-- Square Windows tiles -->
+      <meta name="msapplication-square70x70logo" content="https://quera.org/static/images/logo/logo.2-37f748b73943.svg">
+      <meta name="msapplication-square150x150logo" content="https://quera.org/static/images/logo/logo.2-37f748b73943.svg">
+      <meta name="msapplication-square310x310logo" content="https://quera.org/static/images/logo/logo.2-37f748b73943.svg">
+      <!-- Rectangular Windows tile -->
+      <meta name="msapplication-wide310x150logo" content="https://quera.org/static/images/logo/logo.2-37f748b73943.svg">
+      <!-- Windows tile theme color -->
+      <meta name="msapplication-TileColor" content="#2e2e2e">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mohammad erfan labbafi</title>
+    <style>
+        :root{
+            --color-1: #3F3F3F;
+            --color-2: #D69A00  ;
+            --color-3: #909090  ;
+            --color-shadow:#000;
+            --color-text: #fff;
+            --font-family:vazir ;
+            --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+            --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            
+            
+            }
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+              }
+              @keyframes fade {
+                from {opacity: 0.1} 
+                to {opacity: 100}
+              }
+                @media only screen and (max-width: 1500px) {
+                    .footer-page,.pro-Slide,.pro-page-1,.info,.skills,.bio,.head-text,.header,.menu,.menu-b,.menu-banner,.slideshow-container,.chart--team,.menu-click,.main{
+                      width: 49.99999%;
+                      margin: 0 0;
+                      flex-direction: row;
+            
+                    }
+                  }
+                  @media only screen and (max-width: 500px) {
+                    .footer-page,.pro-slide,.pro-page-1,.info,.skills,.bio,.head-text,.header,.menu,.menu-b,.menu-banner,.slideshow-container,.chart--team,.menu-click,.main{
+                        width: 100%;
+                      height: 50px;
+                      flex-direction: column;
+            
+                    }
+                  }
+                  body{
+                    background-image: url(https://s31.picofile.com/file/8468604276/Group_31.png);
+                    background-repeat: repeat-y;
+                    text-align: center;
+                    top: 0;
+                    left: 0;
+                    margin: 0;
+                    padding: 0;
+                  }
+              
+                  .head-text{
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                    font-family: var(--font-family);
+                    color: var(--color-text);
+                    background-repeat:repeat-x;
+                    background-image: url(https://s30.picofile.com/file/8468604318/Group_2_3_.png);
+                }
+            
+            
+                  header{
+                    
+                    text-align: center;
+                    align-items: center;
+                    z-index: 1;
+                    overflow:hidden;
+                    position: -webkit-sticky;
+                    position: sticky;
+                    left: 0;
+                    top: 0;
+                    height: 60px;
+                    width: 100%;
+                    
+                    
+                    
+                    
+                }
+                    .menu-back{
+                        background-color: var(--color-1);
+                        text-align: center;
+                        top: 0;
+                        padding: 0;
+                        margin: 0;
+                        height: 100%;
+                        width: 100%;
+                        
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    }    
+                    .menu-b{
+                        font-family: var(--font-family);
+                        font-weight: bolder;
+                        color: var(--color-text);
+                        font-size: larger;
+                        padding-top: 13px;
+                        width: 100%;
+                        height: 30px;
+                        text-align: center;
+                        
+            
+                    }
+                    .menu{
+                        color: var(--color-text);
+                        border-radius: 0px 24px 24px 0px;
+            
+                    background-color: var(--color-2);
+                    font-weight: bolder;
+                    width: 20%;
+                    height: 100%;
+                    margin: 0;
+                    top: 0;
+                    bottom:0;
+                    align-items: center;
+                    text-align: center;
+                        font-size:larger;
+                    }
+                    .menu-click{
+                        z-index: 1;
+                        top: 0;
+                        margin: 0;
+                        border-radius: 0  0 24px 24px;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        font-size: x-large;
+                        text-align: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        font-family: Dana;
+                        line-height: normal;
+                        font-style: normal;
+            
+                    }
+                    
+                  .sidenav {
+                    font-weight: bolder;
+                    font-family: dana;
+                    text-align: center;
+                    height: 100%;
+                    width: 0;
+                    position: fixed;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    background-color:var(--color-1);
+                    overflow-x: hidden;
+                    transition: all 400ms ease-in-out;
+                    padding-top: 50px;
+               
+                
+                }
+                  .sidenav a {
+                    text-align: center;
+                    z-index: 2;
+                    background-color: var(--color-2);
+                    padding: 10px 10px 15px 20px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    color: #ffffff;
+                    display: block;
+                    transition:all 0.3s ease-in-out;
+                  }
+                  .sidenav a:hover {
+                    border: 2px solid var(--color-2);
+                    color: var(--color-2);
+                    background-color: var(--color-1);
+            
+                  }
+                  .sidenav .closebtn {
+                    margin-bottom: 10px;
+                    padding: 0;
+                    padding-right: 10px;
+                    padding-left: 10px;
+                    z-index: 2;
+                    position: absolute;
+                    top: 0;
+                    border-radius: 100px;
+                    right: 20px;
+                    font-size: 50px;
+                    margin: 0;
+                    text-align: center;
+                  }
+                  .link-menu{
+                    padding:0;
+                    margin-top: 20px;
+                    border-top-right-radius: 24px;
+                    border-bottom-right-radius: 24px;
+                  }
+              
+            
+            
+            
+            /*menu*/
+            
+            
+            
+            main{
+            
+              width: 100%;  
+              margin-top: 50px;
+            
+            }
+            .bio{
+              margin-top: 80px;
+              padding:0;
+              text-align: center;
+              width: 100%;
+              height: 800px;
+            
+            
+            }
+            
+            .bio-text{
+            border-radius: 24px;
+              font-weight: bolder;
+              font-style: normal;
+              text-align: center;
+              font-size: small;
+              box-shadow: 1px 1px 5px var(--color-3);
+              font-family: var(--font-family);
+              padding-top: 25%;
+              padding-bottom: 25%;
+              margin:0;
+              background-color: var(--color-3);
+            
+            }
+            .info{
+              text-align: center;
+                display:flex;
+                border-radius: 24px;
+                background-color: var(--color-1);
+                width: 100%;
+                height: 100%;
+                color: var(--color-text);
+                font-family: var(--font-family);
+            }
+            .bio-more{
+                text-align: center;
+                font-family: var(--font-family);
+                color: var(--color-text);
+                font-size: small;
+                width: 100%;
+                height: 100%;
+            }
+            .image-person{
+                border-top-left-radius: 24PX;
+                padding-top:10px;
+                margin: 0;
+                border-radius: 24px;
+                font-style: normal;
+                font-family: var(--font-family);  
+                text-align: center;
+                align-items: center;
+                background-color: var(--color-2);
+                width: 100%;
+                height: 30%;
+            
+            }
+            .img-per{
+                margin: 0;
+                padding: 0;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+                width: auto;
+                max-height: 70%;
+                border-radius: 360px;
+            }
+            .img-text{
+              background-color: var(--color-2);
+            
+              font-size: small;
+            padding-top: 10px;
+            margin-top: 20px;
+              border-radius: 50px;
+            font-family: var(--font-family);
+            width: 100%;
+            height: 12%;
+            
+            }
+            .email{
+              padding-top: 50px;
+            width: 100%;
+            margin-right:50px;
+              font-size: smaller;
+            }
+            
+            
+            
+            
+            /*bio*/
+            
+            
+            
+            .page-2{
+              margin-top: 500px;
+              padding: 0;
+              width: 100%;
+            
+            }
+            .skills{
+              margin-left: 20px;
+              display:flex;
+              height: 1000px;
+              width: 95%;
+              margin-bottom: 100px;
+            
+            
+            }
+            .slide-1{
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+              margin-top: 80px;
+              padding-bottom: 25px;
+              margin-left:40px;
+              border-radius: 24px;
+              max-width: 80%;
+              height: 50%;
+              background-color: var(--color-1);
+            }
+            .slide-2{
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+            
+              margin-top: 80px;
+              padding-bottom: 25px;
+              margin-left:40px;
+              border-radius: 24px;
+              max-width: 80%;
+              height: 50%;
+              background-color: var(--color-1);
+            }
+            .slide-3{
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+            
+              margin-top: 80px;
+              padding-bottom: 25px;
+              margin-left:40px;
+              border-radius: 24px;
+              max-width: 80%;
+              height: 50%;
+              background-color: var(--color-1);
+            }
+            
+            .slide-1-title{
+              color: var(--color-text);
+              padding-top: 15px;
+              margin-bottom: 10px;
+              margin-top: 10px;
+              margin-left:0;
+              align-items: center;
+              text-align: center;
+              width: 100%;
+              height: 40px;
+              border-radius: 24px;
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+            
+              background-color: var(--color-3);
+            }
+            .slide-1-text{
+              color: var(--color-text);
+              font-style: normal;
+              font-family: var(--font-family);
+              font-size:large;
+              padding-top: 0;
+              margin-top: 10px;
+              padding-left: 0;
+              margin-left:0;
+              align-items: center;
+              text-align: center;
+              width: 100%;
+              height: 80%;
+              border-radius: 24px;
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+              background-color: var(--color-2);
+            }
+            
+            /*bio*/
+            
+            .footer-page{
+            
+              width: 100%;
+              height: 100%;
+              border-top-right-radius: 24px;
+              border-top-left-radius: 24px;
+              background-color: var(--color-1);
+              margin-top: 250px;
+              padding-bottom: 50px;
+            }
+            .footer-back{
+              font-size: large;
+              margin-right: 200px;
+              width: 100%;
+              height: 100%;
+              background-color: var(--color-2);
+              background-color: #D69A00;
+            border-radius: 24px;
+            }
+            .social-back{
+            
+              font-style: normal;
+              font-size: medium;
+              color: var(--color-text);
+            font-weight: bold;
+              font-family: var(--font-family);
+              width: 100%;
+              height: 100%;
+            
+            }
+            .phone{
+              font-style: normal;
+              font-size: medium;
+              color: var(--color-text);
+            font-weight: bold;
+              font-family: var(--font-family)
+            }
+
+
+    </style>
+</head>
+<body>
+    <h1 class="head-text">my portofoly</h1>
+    <header>
+        
+<div class="menu-back">
+    
+    <div class="menu-b">
+        <ul class="menu" dir="rtl">
+            <div class="menu-click" id="main" onclick="openNav()">
+              menu
+            </div>
+              <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a class="link-menu" href="#info">info</a>
+              <a class="link-menu" href="#skill">skills</a>
+              <a class="link-menu" href="#contact">contact us</a>
+            </div>
+          </ul>
+        </div>
+
+</div>
+    </header>
+    <main>
+<section id="info">
+        <div class="bio">
+            <div class="info">
+          
+                <div class="bio-more">
+                     
+
+                        <div class="image-person">
+                            <img class="img-per" src="https://s30.picofile.com/file/8468604284/6C911738_5CCA_4E66_9A39_A1C0669AE318.JPEG" alt="image-person">
+                            <h4>MohammadErfan Labbafi</h4>
+                          
+                        </div>
+                            <div class="img-text"> 
+                                <h2>Front-End Developer</h2>
+                                <h6>location : Iran,Tehran</h6>
+                                <br><br><br><br>
+                                <span >Lorem ipsum dolor, sit amet consectetur 
+                                    adipisicing elit. Tempore voluptatem facilis 
+                                    adipisci consequuntur, eveniet harum eum dolores
+                                     aliquam laborum illum. Est ullam minima asperiores
+                                      facere voluptate molestias delectus possimus excepturi
+                                      adipisequuntur, eveniet harum eum dolores
+            
+                                </span>
+                                <address class="email">
+                                   Email: erfanlabbafi450@gmail.com
+                                </address>
+                                
+                            </div>
+                    
+                </div>
+                <div class="bio-text">
+                    <span >Lorem ipsum dolor, sit amet consectetur 
+                        adipisicing elit. Tempore voluptatem facilis 
+                        adipisci consequuntur, eveniet harum eum dolores
+                         aliquam laborum illum. Est ullam minima asperiores
+                          facere voluptate molestias delectus possimus excepturi
+                          adipisicing elit. Tempore voluptatem facilis 
+                          adipisci consequuntur, eveniet harum eum dolores
+                           aliquam laborum illum. Est ullam minima asperiores
+                            facere voluptate molestias delectus possimus excepturi
+                            adipisicing elit. Tempore voluptatem facilis 
+                            adipisci consequuntur, eveniet harum eum dolores
+
+                    </span>
+                 
+                    </div>
+                    
+            </div>
+        </div>
+    </section>
+        <!--طراحی منو انجام شد -->
+        <div class="page-2">
+            <section id="skill" class="skills">
+
+                <div class="slide-1">
+                    <h1 class="slide-1-title">Html</h1>
+                    <div class="slide-1-text">
+                        Lorem ipsum, dolor sit amet 
+                        consectetur adipisicing elit. 
+                        Magnam animi omnis voluptate repellendus at, impedit molestias
+                        laudantium velit asperiores possimus laborum consequuntur!
+                         Optio laborum beatae praesentium, exercitationem culpa non incidunt!
+                    </div>
+                </div>
+                <div class="slide-2">
+                    <h1 class="slide-1-title">python</h1>
+                    <div class="slide-1-text">
+                        Lorem ipsum, dolor sit amet 
+                        consectetur adipisicing elit. 
+                        Magnam animi omnis voluptate repellendus at, impedit molestias
+                        laudantium velit asperiores possimus laborum consequuntur!
+                         Optio laborum beatae praesentium, exercitationem culpa non incidunt!
+                    </div>
+                </div>
+                <div class="slide-3">
+                    <h1 class="slide-1-title">javascript</h1>
+                    <div class="slide-1-text">
+                        Lorem ipsum, dolor sit amet 
+                        consectetur adipisicing elit. 
+                        Magnam animi omnis voluptate repellendus at, impedit molestias
+                        laudantium velit asperiores possimus laborum consequuntur!
+                         Optio laborum beatae praesentium, exercitationem culpa non incidunt!
+                    </div>
+                </div>
+            </section>
+            <!--تا اینجا بخش معرفی مهارت ها انجام شد-->
+        </div>
+
+            <!--پایین یه اسلاید میخوام که که پروژه ها رو نمایش بده -->
+       
+
+</main>
+
+                <footer class="footer-page" id="contact">
+
+                            <div class="footer-back">
+                                    <div class="social-back"><br>
+                                        <div class="instagram"><a href="">
+                                            <i class="fa fa-instagram"></i>
+                                            <h3>instagram</h3>
+                                        </a>
+                                            
+                                        </div>
+                                        <div class="telegram"><a href=""> 
+                                             <i class="fa fa-telegram"></i>
+                                            <h3>telegram</h3></a>
+                                          
+                                        </div>
+                                        <div class="github"><a href="">
+                                            <i class="fa fa-github"></i>
+                                            <h3>github</h3>
+                                        </a>
+                                            
+                                        </div>
+                                        <div class="linkdin"><a href="">
+                                            <i class="fa fa-linkedin"></i>
+                                            <h3>linkdin</h3>
+                                        </a>
+                                            
+                                        </div>
+                                    </div>
+
+                                   
+                            </div>
+                            <div class="mail">
+                                <div class="footer">
+                                    <h2 class="ti-fot">ثبت درخواست انتقاد و پیشنهاد</h2>
+                                  
+                                    <form style="color: white;" action="mailto:erfanlab2000@gmail.com" method="post" enctype="text/plain">
+                                    نام و نام خانوادگی:<br>
+                                    <input type="text" name="name"><br>
+                                    ایمیل:<br>
+                                    <input type="text" name="mail"><br>
+                                    متن:<br>
+                                    <input type="text" name="comment" size="50"><br><br>
+                                    <input class="b-1" type="submit" value="ارسال">
+                                    <input class="b-2" type="reset" value="پاک کردن">
+                                    <p><a class="phone" href="tel:+989919295106"> phone number: +989919295106</a></p>
+
+                                    </form>
+
+                                
+                                
+                                </div> 
+                                
+                            </div>
+                </footer>
+
+
+        </div>
+   
+
+
+</body>
+<script>
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white";
+      }
+
+</script>
+
+</html>

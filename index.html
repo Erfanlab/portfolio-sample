@@ -2,31 +2,34 @@
 
 <html lang="en">
 <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-      <!-- Apple/Safari icon -->
-      <link rel="icon" type="image/png" sizes="64x64" href="https://quera.org/static/images/logo/logo.2-37f748b73943.svg">
     
-      <link rel="apple-touch-icon" sizes="180x180" href="https://quera.org/static/images/logo/logo.2-37f748b73943.svg">
+      <!-- Apple/Safari icon -->
+      <link rel="icon" type="image/png" sizes="64x64" href="https://s30.picofile.com/file/8471827392/icons8_person_96.png">
+    
+      <link rel="apple-touch-icon" sizes="180x180" href="https://s30.picofile.com/file/8471827392/icons8_person_96.png">
       <!-- Square Windows tiles -->
-      <meta name="msapplication-square70x70logo" content="https://quera.org/static/images/logo/logo.2-37f748b73943.svg">
-      <meta name="msapplication-square150x150logo" content="https://quera.org/static/images/logo/logo.2-37f748b73943.svg">
-      <meta name="msapplication-square310x310logo" content="https://quera.org/static/images/logo/logo.2-37f748b73943.svg">
+      <meta name="msapplication-square70x70logo" content="https://s30.picofile.com/file/8471827392/icons8_person_96.png">
+      <meta name="msapplication-square150x150logo" content="https://s30.picofile.com/file/8471827392/icons8_person_96.png">
+      <meta name="msapplication-square310x310logo" content="https://s30.picofile.com/file/8471827392/icons8_person_96.png">
       <!-- Rectangular Windows tile -->
-      <meta name="msapplication-wide310x150logo" content="https://quera.org/static/images/logo/logo.2-37f748b73943.svg">
+      <meta name="msapplication-wide310x150logo" content="https://s30.picofile.com/file/8471827392/icons8_person_96.png">
       <!-- Windows tile theme color -->
       <meta name="msapplication-TileColor" content="#2e2e2e">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mohammad erfan labbafi</title>
     <style>
         :root{
-            --color-1: #3F3F3F;
-            --color-2: #D69A00  ;
-            --color-3: #909090  ;
+            --color-1: #121212;
+            --color-2: #00737d  ;
+            --color-3: #0b2e39  ;
             --color-shadow:#000;
+            --color-shadow-1:#00737d;
             --color-text: #fff;
+            --color-text-black: #000;
             --font-family:vazir ;
             --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
             --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -42,7 +45,7 @@
                 to {opacity: 100}
               }
                 @media only screen and (max-width: 1500px) {
-                    .img-per,.image-person,.footer-page,.pro-Slide,.pro-page-1,.info,.skills,.bio,.head-text,.header,.menu,.menu-b,.menu-banner,.slideshow-container,.chart--team,.menu-click,.main{
+                    .social-back,.body,.img-per,.image-person,.footer-page,.pro-Slide,.pro-page-1,.info,.skills,.bio,.head-text,.header,.menu,.menu-b,.menu-banner,.slideshow-container,.chart--team,.menu-click,.main{
                       width: 49.99999%;
                       margin: 0 0;
                       flex-direction: row;
@@ -50,7 +53,7 @@
                     }
                   }
                   @media only screen and (max-width: 500px) {
-                    .img-per,.image-person,.footer-page,.pro-slide,.pro-page-1,.info,.skills,.bio,.head-text,.header,.menu,.menu-b,.menu-banner,.slideshow-container,.chart--team,.menu-click,.main{
+                    .social-back,.body,.img-per,.image-person,.footer-page,.pro-slide,.pro-page-1,.info,.skills,.bio,.head-text,.header,.menu,.menu-b,.menu-banner,.slideshow-container,.chart--team,.menu-click,.main{
                         width: 100%;
                       height: 50px;
                       flex-direction: column;
@@ -67,13 +70,14 @@
                     padding: 0;
                   }
               
-                  .head-text{
+                    .head-text{
                     margin: 0;
                     padding: 0;
                     width: 100%;
                     height: 100%;
-                    font-family: var(--font-family);
-                    color: var(--color-text);
+                    font-family:var(--font-family);
+                    color: var(--color-text-1);
+                    font-weight: bolder;
                     background-repeat:repeat-x;
                     background-image: url(https://s30.picofile.com/file/8468604318/Group_2_3_.png);
                 }
@@ -89,8 +93,12 @@
                     position: sticky;
                     left: 0;
                     top: 0;
-                    height: 60px;
+                    height: 70px;
                     width: 100%;
+                    padding: 0;
+                    margin: 0;
+                    box-shadow:0 5px 10px var(--color-shadow-1);
+
                     
                     
                     
@@ -105,6 +113,7 @@
                         height: 100%;
                         width: 100%;
                         
+                        
                         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
                     }    
                     .menu-b{
@@ -113,17 +122,16 @@
                         color: var(--color-text);
                         font-size: larger;
                         padding-top: 13px;
+                        padding-left: 0.1px;
                         width: 100%;
-                        height: 30px;
+                        height: 50px;
                         text-align: center;
-                        
-            
                     }
                     .menu{
-                        color: var(--color-text);
-                        border-radius: 0px 24px 24px 0px;
-            
+                    color: var(--color-text);
+                    border-radius: 0px 24px 24px 0px;
                     background-color: var(--color-2);
+                    box-shadow:0 0 5px var(--color-shadow-1);
                     font-weight: bolder;
                     width: 20%;
                     height: 100%;
@@ -131,11 +139,19 @@
                     top: 0;
                     bottom:0;
                     align-items: center;
+                    padding-left: 80px;
                     text-align: center;
                         font-size:larger;
                     }
+                    .menu:hover{
+                    
+                        background-color:var(--color-1);
+                        box-shadow: 0 0 50px var(--color-shadow-1);
+                        transition: all 0.5s;
+                        color: var(--color-2);
+                    }
                     .menu-click{
-                        z-index: 1;
+                        z-index: 2;
                         top: 0;
                         margin: 0;
                         border-radius: 0  0 24px 24px;
@@ -160,7 +176,7 @@
                     height: 100%;
                     width: 0;
                     position: fixed;
-                    z-index: 1;
+                    z-index:1;
                     top: 0;
                     left: 0;
                     background-color:var(--color-1);
@@ -176,7 +192,7 @@
                     background-color: var(--color-2);
                     padding: 10px 10px 15px 20px;
                     text-decoration: none;
-                    font-size: 25px;
+                    font-size: 30px;
                     color: #ffffff;
                     display: block;
                     transition:all 0.3s ease-in-out;
@@ -195,9 +211,9 @@
                     z-index: 2;
                     position: absolute;
                     top: 0;
-                    border-radius: 100px;
+                    border-radius: 10%;
                     right: 20px;
-                    font-size: 50px;
+                    font-size: 40px;
                     margin: 0;
                     text-align: center;
                   }
@@ -232,11 +248,9 @@
             }
             
             .bio-text{
-            border-radius: 24px;
-              font-weight: bolder;
+                border-radius: 24px;
               font-style: normal;
               text-align: center;
-              font-size: small;
               box-shadow: 1px 1px 5px var(--color-3);
               font-family: var(--font-family);
               padding-top: 25%;
@@ -245,10 +259,17 @@
               background-color: var(--color-3);
             
             }
+            .strong-text{
+                font-family: var(--font-family);
+                color: var(--color-2);
+                font-size: 15px;
+                font-weight: bolder;
+
+            }
             .info{
               text-align: center;
                 display:flex;
-                border-radius: 24px;
+                border-radius:24px;
                 background-color: var(--color-1);
                 width: 100%;
                 height: 100%;
@@ -265,43 +286,59 @@
             }
             .image-person{
                 border-top-left-radius: 24PX;
-                padding-top:10px;
+                padding-top:40px;
                 margin: 0;
-                border-radius: 24px;
+                box-shadow: 0 0 5px var(--color-1);
+                border-top-right-radius: 24px;
                 font-style: normal;
                 font-family: var(--font-family);  
                 text-align: center;
                 align-items: center;
                 background-color: var(--color-2);
                 width: 100%;
-                height: 30%;
+                height: 35%;
             
             }
+            .image-person-text{
+                text-shadow:0 0 10px var(--color-1);
+                font-weight: bolder;
+                font-family: var(--font-family);
+                padding-top: 20px;
+            }
+            
             .img-per{
                 margin: 0;
                 padding: 0;
-                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+                box-shadow:0 0 10px var(--color-1) ; 
                 width: auto;
                 max-height: 70%;
                 border-radius: 360px;
             }
             .img-text{
               background-color: var(--color-2);
-            
+              text-shadow:0 0 10px var(--color-1);
               font-size: small;
             padding-top: 10px;
             margin-top: 20px;
-              border-radius: 50px;
+              border-radius: 20px;
             font-family: var(--font-family);
             width: 100%;
-            height: 12%;
+            height: 18%;
             
             }
             .email{
+                color: var(--color-2);
+                text-shadow:0 0 10px var(--color-2);
+                padding-bottom: 20px;
               padding-top: 50px;
             width: 100%;
             margin-right:50px;
               font-size: smaller;
+            }
+            .email:hover{
+                color: #fff;
+                text-shadow: none;
+                transition: all 0.5s ;
             }
             
             
@@ -314,13 +351,12 @@
             .page-2{
               margin-top: 500px;
               padding: 0;
-              width: 100%;
-            
+              width: 100%;            
             }
             .skills{
               margin-left: 20px;
               display:flex;
-              height: 1000px;
+              height: 1200px;
               width: 95%;
               margin-bottom: 100px;
             
@@ -335,6 +371,14 @@
               max-width: 80%;
               height: 50%;
               background-color: var(--color-1);
+            }
+            .img_html{
+                margin-top: 20px;
+                box-shadow: 0 0 10px var(--color-1);
+                border-radius: 24px;
+                width: 90%;
+                height: 60%;
+
             }
             .slide-2{
               box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
@@ -360,34 +404,35 @@
             }
             
             .slide-1-title{
+                text-shadow:0 0 10px var(--color-1) ;
               color: var(--color-text);
-              padding-top: 15px;
+              padding-top: 10px;
               margin-bottom: 10px;
               margin-top: 10px;
               margin-left:0;
               align-items: center;
               text-align: center;
               width: 100%;
-              height: 40px;
+              height: 60px;
               border-radius: 24px;
               box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
-            
               background-color: var(--color-3);
             }
             .slide-1-text{
+              text-shadow:0 0 10px var(--color-1) ;
               color: var(--color-text);
               font-style: normal;
               font-family: var(--font-family);
-              font-size:large;
-              padding-top: 0;
-              margin-top: 10px;
+              font-size:15px;
+              padding-top: 25px;
+              margin-top: 35px;
               padding-left: 0;
               margin-left:0;
               align-items: center;
               text-align: center;
               width: 100%;
               height: 80%;
-              border-radius: 24px;
+              border-radius: 15px;
               box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
               background-color: var(--color-2);
             }
@@ -395,34 +440,58 @@
             /*bio*/
             
             .footer-page{
-            
+                color: var(--color-text);
               width: 100%;
               height: 100%;
               border-top-right-radius: 24px;
               border-top-left-radius: 24px;
               background-color: var(--color-1);
-              margin-top: 250px;
+              margin-top: 500px;
               padding-bottom: 50px;
             }
             .footer-back{
+                color:var(--color-text);
               font-size: large;
               margin-right: 200px;
               width: 100%;
               height: 100%;
               background-color: var(--color-2);
-              background-color: #D69A00;
+              background-color: var(--color-3);
             border-radius: 24px;
             }
             .social-back{
-            
+            padding-left: 2%;
+                text-align: center;
+               align-items: center;
+                display: flex;
               font-style: normal;
               font-size: medium;
-              color: var(--color-text);
-            font-weight: bold;
+              color: var(--color-1);
+              font-weight: bold;
               font-family: var(--font-family);
               width: 100%;
               height: 100%;
             
+            }
+            .instagram{
+                font-size: 50px;
+                padding-right: 20px;
+            }
+            .telegram{
+                padding-right: 20px;
+                font-size: 50px;
+
+
+            }
+            .github{
+                padding-right: 20px;
+                font-size: 50px;
+
+            }
+            .linkdin{
+                padding-right: 20px;
+                font-size: 50px;
+
             }
             .phone{
               font-style: normal;
@@ -431,12 +500,44 @@
             font-weight: bold;
               font-family: var(--font-family)
             }
+            .ti-fot{
+                padding-top: 10px;
+                font-size: 35px;
+                font-family: var(--font-family);
+                font-weight: bolder;
+            }
+            .c-name{
+                border-radius: 10px;
+                
+            }
+            .c-name:hover{
+                transition: all 0.2s;
 
+                box-shadow:0 0 10px var(--color-2);
 
+            }
+            .b-1{
+                align-items: center;
+                color: var(--color-text);
+                text-align: center;
+                font-size: 20px;
+                display: flexbox;
+                border-radius: 10px;
+                width: 20%;
+                font-family: var(--font-family);
+                font-weight: bolder;
+                padding: 10px;
+                text-shadow: var(--color-1);
+                background-color: var(--color-3);
+            }
+            .b-1:hover{
+                transition: all 0.2s;
+                box-shadow: 0 0 10px var(--color-2);
+            }
     </style>
 </head>
 <body>
-    <h1 class="head-text">my portofoly</h1>
+   <!-- <h1 class="head-text">My CV</h1>-->
     <header>
         
 <div class="menu-back">
@@ -466,20 +567,18 @@
                      
 
                         <div class="image-person">
-                            <img class="img-per" src="https://s30.picofile.com/file/8468604284/6C911738_5CCA_4E66_9A39_A1C0669AE318.JPEG" alt="image-person">
-                            <h4>MohammadErfan Labbafi</h4>
+                            <img class="img-per" src="https://s31.picofile.com/file/8471828476/1697490749116.jpg" alt="image-person">
+                            <h4 class="image-person-text">MohammadErfan Labbafi</h4>
                           
                         </div>
                             <div class="img-text"> 
                                 <h2>Front-End Developer</h2>
                                 <h6>location : Iran,Tehran</h6>
                                 <br><br><br><br>
-                                <span >Lorem ipsum dolor, sit amet consectetur 
-                                    adipisicing elit. Tempore voluptatem facilis 
-                                    adipisci consequuntur, eveniet harum eum dolores
-                                     aliquam laborum illum. Est ullam minima asperiores
-                                      facere voluptate molestias delectus possimus excepturi
-                                      adipisequuntur, eveniet harum eum dolores
+                                <span >Fueled by a constant desire for continuous learning,
+                                     I actively seek new opportunities in the<strong class="strong-text"> JavaScript,Web-Developer </strong>
+                                    to contribute to personal and 
+                                    professional growth by expanding knowledge and expertise.
             
                                 </span>
                                 <address class="email">
@@ -490,18 +589,16 @@
                     
                 </div>
                 <div class="bio-text">
-                    <span >Lorem ipsum dolor, sit amet consectetur 
-                        adipisicing elit. Tempore voluptatem facilis 
-                        adipisci consequuntur, eveniet harum eum dolores
-                         aliquam laborum illum. Est ullam minima asperiores
-                          facere voluptate molestias delectus possimus excepturi
-                          adipisicing elit. Tempore voluptatem facilis 
-                          adipisci consequuntur, eveniet harum eum dolores
-                           aliquam laborum illum. Est ullam minima asperiores
-                            facere voluptate molestias delectus possimus excepturi
-                            adipisicing elit. Tempore voluptatem facilis 
-                            adipisci consequuntur, eveniet harum eum dolores
-
+                    <span >
+                        I am a creative and proactive individual who has gained valuable
+                        experiences in the Content production. My educational background
+                        lies in power electricity , and currently, I am working at Mofid 
+                        Securities in the capacity of Support team.
+                        Throughout my professional journey, I have become proficient in 
+                        <strong class="strong-text">( ICDL , Front-End , Unity3D, Python )</strong> successfully applying them to complete 
+                        projects. My ability to collaborate effectively in a team and communicate
+                         with colleagues is among the qualities that define my character.
+                        
                     </span>
                  
                     </div>
@@ -516,32 +613,28 @@
                 <div class="slide-1">
                     <h1 class="slide-1-title">Html</h1>
                     <div class="slide-1-text">
-                        Lorem ipsum, dolor sit amet 
-                        consectetur adipisicing elit. 
-                        Magnam animi omnis voluptate repellendus at, impedit molestias
-                        laudantium velit asperiores possimus laborum consequuntur!
-                         Optio laborum beatae praesentium, exercitationem culpa non incidunt!
+                        Participating in the Quera levelup course and passing 9
+                         hours of training and workshop and doing
+                         a project and getting a passing grade in the course
+                         <img  class="img_html" src="https://s31.picofile.com/file/8471832392/91e7faf30f174e1da772ddb666c9e3a9.jpg" alt="">
                     </div>
                 </div>
                 <div class="slide-2">
                     <h1 class="slide-1-title">python</h1>
                     <div class="slide-1-text">
-                        Lorem ipsum, dolor sit amet 
-                        consectetur adipisicing elit. 
-                        Magnam animi omnis voluptate repellendus at, impedit molestias
-                        laudantium velit asperiores possimus laborum consequuntur!
-                         Optio laborum beatae praesentium, exercitationem culpa non incidunt!
+                            The participant in the home school course has successfully completed 57 hours 
+                            of training. Hours of training and workshops and doing projects
+                            and getting a passing grade in the course
+                         <img  class="img_html" src="https://s31.picofile.com/file/8471835100/MK_1PT0BC.png" alt="">
                     </div>
                 </div>
                 <div class="slide-3">
-                    <h1 class="slide-1-title">javascript</h1>
+                    <h1 class="slide-1-title">Excell</h1>
                     <div class="slide-1-text">
-                        Lorem ipsum, dolor sit amet 
-                        consectetur adipisicing elit. 
-                        Magnam animi omnis voluptate repellendus at, impedit molestias
-                        laudantium velit asperiores possimus laborum consequuntur!
-                         Optio laborum beatae praesentium, exercitationem culpa non incidunt!
-                    </div>
+                    She has successfully completed the school for 5 hours of teaching in history
+                    <img  class="img_html" src="https://s31.picofile.com/file/8471832768/MK_9RJWOV.png" alt="">
+
+                </div>
                 </div>
             </section>
             <!--تا اینجا بخش معرفی مهارت ها انجام شد-->
@@ -558,24 +651,24 @@
                                     <div class="social-back"><br>
                                         <div class="instagram"><a href="">
                                             <i class="fa fa-instagram"></i>
-                                            <h3>instagram</h3>
+                                
                                         </a>
                                             
                                         </div>
-                                        <div class="telegram"><a href=""> 
+                                        <div class="telegram"><a href="https://t.me/Erfan_MFD"> 
                                              <i class="fa fa-telegram"></i>
-                                            <h3>telegram</h3></a>
+                                            </a>
                                           
                                         </div>
-                                        <div class="github"><a href="">
+                                        <div class="github"><a href="https://github.com/Erfanlab/pro_quera/blob/main/index.html">
                                             <i class="fa fa-github"></i>
-                                            <h3>github</h3>
+                                         
                                         </a>
                                             
                                         </div>
-                                        <div class="linkdin"><a href="">
+                                        <div class="linkdin"><a href="https://www.linkedin.com/in/mohammaderfan-labbafi-2b300b22a/">
                                             <i class="fa fa-linkedin"></i>
-                                            <h3>linkdin</h3>
+                                        
                                         </a>
                                             
                                         </div>
@@ -585,22 +678,22 @@
                             </div>
                             <div class="mail">
                                 <div class="footer">
-                                    <h2 class="ti-fot">ثبت درخواست انتقاد و پیشنهاد</h2>
+                                    <h2 class="ti-fot">send Message</h2>
                                   
                                     <form style="color: white;" action="mailto:erfanlab2000@gmail.com" method="post" enctype="text/plain">
-                                    نام و نام خانوادگی:<br>
-                                    <input type="text" name="name"><br>
-                                    ایمیل:<br>
-                                    <input type="text" name="mail"><br>
-                                    متن:<br>
-                                    <input type="text" name="comment" size="50"><br><br>
-                                    <input class="b-1" type="submit" value="ارسال">
-                                    <input class="b-2" type="reset" value="پاک کردن">
+                                    Your Name:<br>
+                                    <input class="c-name" type="text" name="name"><br>
+                                    Email:<br>
+                                    <input class="c-name" type="text" name="mail"><br>
+                                    Text:<br>
+                                    <input class="c-name" type="text" name="comment" size="50"><br><br>
+                                    <input class="b-1" type="submit" value="Send">
+                                    <input class="b-1" type="reset" value="Claer">
                                     <p><a class="phone" href="tel:+989919295106"> phone number: +989919295106</a></p>
 
                                     </form>
 
-                                <p>erfan</p>
+                                <p style="padding-top: 50px;">Copyright © 2023-2024 Labbafi. All rights reserved</p>
                                 
                                 </div> 
                                 
@@ -618,7 +711,6 @@
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
         document.getElementById("main").style.marginLeft = "250px";
-        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
       }
       
       function closeNav() {

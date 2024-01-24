@@ -45,7 +45,7 @@
                 to {opacity: 100}
               }
                 @media only screen and (max-width: 1500px) {
-                    .social-back,.body,.img-per,.image-person,.footer-page,.pro-Slide,.pro-page-1,.info,.skills,.bio,.head-text,.header,.menu,.menu-b,.menu-banner,.slideshow-container,.chart--team,.menu-click,.main{
+                    .video-main,.social-back,.body,.img-per,.image-person,.footer-page,.pro-Slide,.pro-page-1,.info,.skills,.bio,.head-text,.header,.menu,.menu-b,.menu-banner,.slideshow-container,.chart--team,.menu-click,.main{
                       width: 49.99999%;
                       margin: 0 0;
                       flex-direction: row;
@@ -53,7 +53,7 @@
                     }
                   }
                   @media only screen and (max-width: 500px) {
-                    .social-back,.body,.img-per,.image-person,.footer-page,.pro-slide,.pro-page-1,.info,.skills,.bio,.head-text,.header,.menu,.menu-b,.menu-banner,.slideshow-container,.chart--team,.menu-click,.main{
+                    .video-main,.social-back,.body,.img-per,.image-person,.footer-page,.pro-slide,.pro-page-1,.info,.skills,.bio,.head-text,.header,.menu,.menu-b,.menu-banner,.slideshow-container,.chart--team,.menu-click,.main{
                         width: 100%;
                       height: 50px;
                       flex-direction: column;
@@ -349,9 +349,10 @@
             
             
             .page-2{
-              margin-top: 500px;
+              margin-top: 200px;
               padding: 0;
-              width: 100%;            
+              width: 100%;  
+              height: 1500px;          
             }
             .skills{
               margin-left: 20px;
@@ -437,6 +438,45 @@
               background-color: var(--color-2);
             }
             
+
+            /*video*/
+              .video-main{
+                margin-left: 10px;
+                display:flex;
+                margin-top: 200px;
+                background-color: var(--color-1);
+                border-radius: 24px;
+                height: 400px;
+                width: 95%;
+                box-shadow: 0 0 10px var(--color-1);
+              }
+              
+              .video-text{
+                width: 100%;
+                max-height:100%;
+                border-radius: 24px;
+                text-shadow:0 0 10px var(--color-1);
+                box-shadow:0 0 10px var(--color-1);
+                background-color: var(--color-3);
+                font-family: var(--font-family);
+                color: var(--color-text);
+                padding-top: 18%;
+                padding-right: 0;
+                padding-bottom: 15%;
+              }
+              .video-play{ 
+
+      
+                margin-top: 35px;
+                padding:0;
+                margin-left:10px;
+                border-radius: 24px;
+                max-height:85%;
+                width: 95%;
+                box-shadow: 0 0 10px var(--color-3);
+              }
+
+
             /*bio*/
             
             .footer-page{
@@ -446,11 +486,12 @@
               border-top-right-radius: 24px;
               border-top-left-radius: 24px;
               background-color: var(--color-1);
-              margin-top: 500px;
+              margin-top: 200px;
+              padding: 0;
               padding-bottom: 50px;
             }
             .footer-back{
-                color:var(--color-text);
+              color:var(--color-text);
               font-size: large;
               margin-right: 200px;
               width: 100%;
@@ -653,6 +694,14 @@
                 </div>
             </section>
             <!--تا اینجا بخش معرفی مهارت ها انجام شد-->
+        </div>
+        <div class="video-main">
+
+          <div class="video-text">  Production of video content for capital market education
+
+          </div>
+            <video class="video-play" controls src="https://s31.picofile.com/d/8471863626/c1672122-3344-448a-97a5-593472a3ae9c/Gradient_Pink_and_Purple_Colorful_Channel_Intro_Video_Promotion.mp4"></video>
+
         </div>
 
             <!--پایین یه اسلاید میخوام که که پروژه ها رو نمایش بده -->

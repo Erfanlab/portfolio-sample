@@ -34,6 +34,7 @@
             --font-family: vazir;
             --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            --background-body:#02545cd2;
         }
         
         @media screen and (max-height: 450px) {
@@ -107,9 +108,9 @@
                 flex-direction: column;
             }
         }
-        
         body {
-            background-image: url(https://s31.picofile.com/file/8468604276/Group_31.png);
+            background-color: var(--background-body);
+            overflow-x: hidden;
             background-repeat: repeat-y;
             text-align: center;
             top: 0;
@@ -230,7 +231,7 @@
         .sidenav a {
             text-align: center;
             z-index: 2;
-            background-color: var(--color-2);
+            background-color: var(--color-1);
             padding: 10px 10px 15px 20px;
             text-decoration: none;
             font-size: 30px;
@@ -473,6 +474,7 @@
         /*video*/
         
         .video-main {
+            display: inline;
             font-family: var(--font-family);
             text-align: center;
             color: var(--color-text);
@@ -486,34 +488,32 @@
             box-shadow: 0 0 10px var(--color-1);
         }
         
-        .video-text {
-            display: inline;
+        
+        .video-figma {
             width: 100%;
             text-align: center;
-            max-height: 100%;
+            height: 100%;
             border-radius: 24px;
             text-shadow: 0 0 10px var(--color-1);
             box-shadow: 0 0 10px var(--color-1);
             background-color: var(--color-3);
             font-family: var(--font-family);
             color: var(--color-text);
-            padding-top: 1%;
             padding-right: 0;
-            padding-bottom: 1%;
-        }
-        
-        .video-figma {
+            border-radius: 24px;
             padding: 0;
-            border-radius: 34px;
             box-shadow: 0 0 10px var(--color-3);
         }
-        
-        .video-canva {
-            margin-top: 35px;
-            padding: 0;
-            margin-left: 10px;
+        .video-figma-media{
+            width:250px;
+            height: 360px;
+        }
+        .video-canva{
+            background-color: var(--color-2);
             border-radius: 24px;
             max-height: 100%;
+            padding: 0;
+            margin-left: 10px;
             width: 95%;
             box-shadow: 0 0 10px var(--color-3);
         }
@@ -532,6 +532,7 @@
         }
         
         .footer-back {
+            
             color: var(--color-text);
             font-size: large;
             margin-right: 200px;
@@ -732,15 +733,28 @@
             <!--تا اینجا بخش معرفی مهارت ها انجام شد-->
         </div>
         <div class="video-main">
-            <h1>Production of video content for capital market education</h1>
-            <div class="video-text">
+            <div class="video-figma">
                 <h1>Figma UI design <a href="https://www.figma.com/file/iH4YS7RX63E86hds2qQkqW/resume?type=design&node-id=0%3A1&mode=design&t=jpuYl8Dg1VqfJdq6-1">To view portfolio</a>
+                    <video class="video-figma-media" controls muted="">
+                        <source src="https://s31.picofile.com/d/8472533142/fb4767e7-ed8c-49ca-90f1-bfc9d04cc9d7/Erfan_labbafi.mp4" type="video/mp4">
+                        <source src="https://s31.picofile.com/d/8472533142/fb4767e7-ed8c-49ca-90f1-bfc9d04cc9d7/Erfan_labbafi.mp4" type="video/ogg">
+                        <source src="https://s31.picofile.com/d/8472533142/fb4767e7-ed8c-49ca-90f1-bfc9d04cc9d7/Erfan_labbafi.mp4" type="video/H.264">
+                        <source src="https://s31.picofile.com/d/8472533142/fb4767e7-ed8c-49ca-90f1-bfc9d04cc9d7/Erfan_labbafi.mp4" type="video/MPEG-4">
+                      </video>
                 </h1>
-                <video class="video-figma" width="240px" height="360px" controls type="video/mp4" src="https://s31.picofile.com/d/8472533142/ba435266-aa54-40db-8c18-a3a6d843b927/Erfan_labbafi.mp4"></video>
-
             </div>
-            <video class="video-canva" controls type="video/mp4" src="https://s31.picofile.com/d/8472533018/21c8dea8-53c8-494b-b032-8dc6fd72805a/Add_a_heading.mp4"></video>
-
+            <div class="video-canva">
+                <h1>Production of video content for capital market education
+            <video style="border-radius: 24px;" width="100%" height="100%" controls muted="">
+                <source src="https://s31.picofile.com/d/8472533018/9f18e486-db9d-4b5b-aba9-aa8e7060d981/Add_a_heading.mp4" type="video/H.264">
+                <source src="https://s31.picofile.com/d/8472533018/9f18e486-db9d-4b5b-aba9-aa8e7060d981/Add_a_heading.mp4" type="video/mp4">
+                <source src="https://s31.picofile.com/d/8472533018/9f18e486-db9d-4b5b-aba9-aa8e7060d981/Add_a_heading.mp4" type="video/ogg">
+                <source src="https://s31.picofile.com/d/8472533018/9f18e486-db9d-4b5b-aba9-aa8e7060d981/Add_a_heading.mp4" type="video/MPEG-4">
+              </video>
+            </div>
+        </h1>
+  
+    
         </div>
 
 

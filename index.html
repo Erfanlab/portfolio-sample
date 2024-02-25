@@ -23,20 +23,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mohammad erfan labbafi</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
          :root {
-            --color-1: #121212;
-            --color-2: #00737d;
-            --color-3: #0b2e39;
-            --color-shadow: #000;
-            --color-shadow-1: #00737d;
+            --color-1: #1B262C;
+            --color-2: #3282B8;
+            --color-3: #0F4C75;
+            --color-shadow: #3282B8;
+            --color-shadow-1: #BBE1FA;
             --color-text: #fff;
             --color-text-black: #000;
             --font-family: vazir;
             --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            --background-body: #02545cd2;
+            --background-body: #6a92ad;
         }
         
         @media screen and (max-height: 450px) {
@@ -98,6 +100,8 @@
             .menu-banner,
             .slideshow-container,
             .chart--team,
+            .carousel-caption,
+            .container,
             .main {
                 width: 100%;
                 height: 50%;
@@ -106,6 +110,7 @@
                 margin-top: 600px;
             }
         }
+        
         @media only screen and (max-width: 500px) {
             .img-per,
             .image-person,
@@ -115,15 +120,38 @@
             .social-back,
             .info,
             .skills,
+            .carousel-caption,
             .footer-page,
             .bio,
             .head-text,
+            .container,
             .main {
                 width: 100%;
                 height: 50%;
                 flex-direction: column;
                 font-size: 10px;
-            }}
+            }
+        }
+        
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: var(--color-1);
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        
+        #myBtn:hover {
+            background-color: var(--color-2);
+        }
         
         body {
             background-color: var(--background-body);
@@ -373,14 +401,12 @@
             height: 55%;
             border-radius: 24px;
             transition: all 0.4s;
-
-
         }
-        .img-per:hover{
+        
+        .img-per:hover {
             transition: all 1s;
             border-radius: 360px;
             box-shadow: 0 0 20px 30px var(--color-3);
-
         }
         
         .img-text {
@@ -394,6 +420,7 @@
             width: 100%;
             height: 15%;
         }
+        
         .email {
             color: var(--color-2);
             text-shadow: 0 0 10px var(--color-2);
@@ -412,9 +439,9 @@
         .page-2 {
             align-items: center;
             padding: 0;
-            margin-bottom: 200px;
             width: 100%;
-            height: 1000px;
+            margin-bottom: 200px;
+            max-height: 800px;
         }
         
         .skills {
@@ -423,101 +450,27 @@
             display: flex;
             height: 100%;
             width: 100%;
-            margin-bottom: 300px;
         }
         
-        .slide-1 {
-            font-size: 15px;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            margin-top: 45px;
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            margin-left: 25px;
-            margin-right: 25px;
-            border-radius: 14px;
-            width: 85%;
-            height: 50%;
-            background-color: var(--color-1);
-        }
-        
-        .img_html {
-            margin-top: 100px;
-            box-shadow: 0 0 10px var(--color-1);
-            border-radius: 24px;
-            width: 85%;
-            max-height: 80%;
-            transition: all 1s;
-
-        }
-        .img_html:hover{
-            transition: all 1s;
-            margin-top: 150px;
-            border-radius: 10px;
-            width: 100%;
-
-        }
-        .slide-2 {
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            margin-top: 45px;
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            margin-left: 25px;
-            margin-right: 25px;
-            border-radius: 14px;
-            width: 85%;
-            height: 50%;
-            background-color: var(--color-1);
-        }
-        
-        .slide-3 {
-            font-size: 15px;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            margin-top: 45px;
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            margin-left: 25px;
-            margin-right: 25px;
-            border-radius: 14px;
-            width: 85%;
-            height: 50%;
-            background-color: var(--color-1);
-        }
-        
-        .slide-1-title {
-            text-shadow: 0 5px 10px var(--color-1);
-            color: var(--color-text);
-            margin-bottom: 1px;
-            padding-bottom: 5px;
-            margin-top: 10px;
-            margin-left: 10px;
+        .carousel-caption {
+            height: 130px;
+            font-size: 8px;
             align-items: center;
-            text-align: center;
-            width: 75%;
-            font-size: 20px;
+            border-radius: 80px;
+            background-color: #3282b8d2;
+            box-shadow: 5px 5px 10px var(--color-1);
             font-weight: bolder;
-            height: 30px;
-            border-radius: 14px;
-            box-shadow: 0 0 10px 0.2px var(--color-shadow-1);
-            background-color: var(--color-3);
+            font-family: var(--font-family);
+            color: var(--color-text-black);
+            text-shadow: 1px 1px 10px var(--text-shadow);
+            transition: all 0.5s;
         }
         
-        .slide-1-text {
-            text-shadow: 0 5px 10px var(--color-1);
-            color: var(--color-text);
-            font-style: normal;
-            font-family: var(--font-family);
-            padding-top: 5px;
-            font-size: 10px;
-            margin-top: 35px;
-            padding-left:10px;
-            padding-right: 10px;
-            align-items: center;
-            text-align: center;
-            width: 100%;
-            height: 100%;
-            border-radius: 15px;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            background-color: var(--color-2);
+        .carousel-caption:hover {
+            font-size: 0;
+            transition: all 300ms;
+            background-color: #3282b842;
+            box-shadow: 0 0 0 0;
         }
         /*video*/
         
@@ -563,9 +516,8 @@
         }
         
         .video-figma-media {
-
             width: 100%;
-            max-height:500px;
+            max-height: 500px;
             border-radius: 24px;
         }
         
@@ -578,20 +530,20 @@
             width: 100%;
             box-shadow: 0 0 10px var(--color-3);
         }
-        .video-canva-text{
+        
+        .video-canva-text {
             text-shadow: 1px 5px 10px var(--color-text-black);
             margin-top: 80px;
             font-size: 20px;
         }
-        .video-canva-media{
+        
+        .video-canva-media {
             padding: auto;
             margin: auto;
             border-radius: 24px;
             max-width: 100%;
             max-height: 100%;
         }
-        
-
         /*bio*/
         
         .footer-page {
@@ -707,6 +659,7 @@
 
 <body>
 
+
     <!-- <h1 class="head-text">My CV</h1>-->
     <header>
 
@@ -786,39 +739,68 @@
     <!--طراحی منو انجام شد -->
     <div class="page-2">
         <section id="skill" class="skills">
+            <div class="container" style="border-radius: 24px;">
+                <h2 style="font-family:var(--font-family);color: #fff;text-shadow: 1px 5px 10px var(--color-text-black);background-color: #3282B8;border-radius: 14px;box-shadow: 5px 5px 10px var(--color-1);
+                "> My Skills</h2>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
 
-            <div class="slide-1">
-                <h1 class="slide-1-title">web-developer</h1>
-                <div class="slide-1-text">
-                    Participating in the Quera levelup course and passing 9 hours of training and workshop and doing a project and getting a passing grade in the course
-                    <img class="img_html" src="https://s31.picofile.com/file/8471832392/91e7faf30f174e1da772ddb666c9e3a9.jpg" alt="">
-                </div>
-            </div>
-            <div class="slide-2">
-                <h1 class="slide-1-title">python</h1>
-                <div class="slide-1-text">
-                    The participant in the home school course has successfully completed 57 hours of training. Hours of training and workshops and doing projects and getting a passing grade in the course
-                    <img class="img_html" src="https://s31.picofile.com/file/8471835100/MK_1PT0BC.png" alt="">
-                </div>
-            </div>
-            <div class="slide-3">
-                <h1 class="slide-1-title">Excell</h1>
-                <div class="slide-1-text">
-                    She has successfully completed the school for 5 hours of teaching in history
-                    <img class="img_html" src="https://s31.picofile.com/file/8471832768/MK_9RJWOV.png" alt="">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" style="border-radius: 24px;">
 
+                        <div class="item active" style="border-radius: 24px;">
+                            <img src="https://s31.picofile.com/file/8471832768/MK_9RJWOV.png" alt="Los Angeles" style="width:100%;">
+                            <div class="carousel-caption">
+                                <h3>Excell</h3>
+                                <p>She has successfully completed the school for 5 hours of teaching in history</p>
+                            </div>
+                        </div>
+
+                        <div class="item" style="border-radius: 24px;">
+                            <img src="https://s31.picofile.com/file/8471835100/MK_1PT0BC.png" alt="Chicago" style="width:100%;">
+                            <div class="carousel-caption">
+                                <h3>python</h3>
+                                <p>The participant in the home school course has successfully completed 57 hours of training. Hours of training and workshops and doing projects and getting a passing grade in the course</p>
+                            </div>
+                        </div>
+
+                        <div class="item" style="border-radius: 24px;">
+                            <img src="https://s31.picofile.com/file/8471832392/91e7faf30f174e1da772ddb666c9e3a9.jpg" alt="New York" style="width:100%;">
+                            <div class="carousel-caption">
+                                <h3>web-developer</h3>
+                                <p>Participating in the Quera levelup course and passing 9 hours of training and workshop and doing a project and getting a passing grade in the course </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="border-radius: 24px;">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next" style="border-radius: 24px;">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-        </section>
-        <!--تا اینجا بخش معرفی مهارت ها انجام شد-->
+
+
+            <!--تا اینجا بخش معرفی مهارت ها انجام شد-->
     </div>
     <div class="video-main">
         <div class="video-figma">
             <h1 class="video-figma-text">Figma UI design <br> <a href="https://www.figma.com/file/iH4YS7RX63E86hds2qQkqW/resume?type=design&node-id=0%3A1&mode=design&t=jpuYl8Dg1VqfJdq6-1">To view portfolio</a>
             </h1>
-                <video class="video-figma-media" controls muted="">
+            <video class="video-figma-media" controls muted="">
                         <source src="https://s31.picofile.com/d/8472533142/fb4767e7-ed8c-49ca-90f1-bfc9d04cc9d7/Erfan_labbafi.mp4" type="video/mp4">
-                        <source src="https://s31.picofile.com/d/8472568850/555c45bc-91b5-4c7f-8286-3b0b842f330e/Erfan_labbafi.webm" type="video/webm">
+                        <source src="https://s31.picofile.com/d/8472568850/3f360beb-92c2-4845-adab-c5203bf7a6d0/Erfan_labbafi.webm" type="video/webm">
                         <source src="https://s30.picofile.com/d/8472588518/a3ba7ba8-78f3-4959-8e07-80451ca666cd/Erfan_labbafi.mp4" type="video/mp4">
                         <source src="https://s31.picofile.com/d/8472589392/db93bac6-9984-48b1-a380-b3bce9d81525/Erfan_labbafi.avi" type="video/avi">
 
@@ -829,11 +811,11 @@
             <h1 class="video-canva-text"> Production of video content for capital market education
             </h1>
 
-                <video class="video-canva-media"  controls muted="">
+            <video class="video-canva-media" controls muted="">
                 <source src="https://s30.picofile.com/d/8472588426/9b05a005-2d79-49b1-9fa7-bd43a9085cb3/Add_a_heading.mp4" type="video/mp4">
                 <source src="https://s30.picofile.com/d/8472589476/d3c7dcfe-2e11-441d-b938-9f113eb8e5da/Add_a_heading.avi" type="video/avi">
                 <source src="https://s31.picofile.com/d/8472533018/9f18e486-db9d-4b5b-aba9-aa8e7060d981/Add_a_heading.mp4" type="video/mp4">
-                <source src="https://s30.picofile.com/d/8472568184/f1c00a9c-a91c-4827-b72f-7ff9b9fde768/Add_a_heading.webm" type="video/webm">
+                <source src="https://s30.picofile.com/d/8472568184/ed43c992-1017-46df-9fcd-ff778915af5b/Add_a_heading.webm" type="video/webm">
 
               </video>
         </div>
@@ -911,11 +893,36 @@
 
 
     </div>
-
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
 </body>
 <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+
+
+    ///old
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
         document.getElementById("main").style.marginLeft = "250px";

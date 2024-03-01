@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="64x64" href="https://s31.picofile.com/file/8472913476/IMG_2308.jpeg">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://s31.picofile.com/file/8472913476/IMG_2308.jpeg">
+    <!-- Square Windows tiles -->
+    <meta name="msapplication-square70x70logo" content="https://s31.picofile.com/file/8472913476/IMG_2308.jpeg">
+    <meta name="msapplication-square150x150logo" content="https://s31.picofile.com/file/8472913476/IMG_2308.jpeg">
+    <meta name="msapplication-square310x310logo" content="https://s31.picofile.com/file/8472913476/IMG_2308.jpeg">
+    <!-- Rectangular Windows tile -->
+    <meta name="msapplication-wide310x150logo" content="https://s31.picofile.com/file/8472913476/IMG_2308.jpeg">
+    <!-- Windows tile theme color -->
+    <meta name="msapplication-TileColor" content="#2e2e2e">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyGame</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    :root {
+        --color-1: #1B262C;
+        --color-2: #3282B8;
+        --color-3: #0F4C75;
+        --color-shadow: #3282B8;
+        --color-shadow-1: #BBE1FA;
+        --color-text: #fff;
+        --color-text-black: #000;
+        --font-family: vazir;
+        --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        --background-body: #6a92ad;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: 0.1
+        }
+        to {
+            opacity: 100
+        }
+    }
+    
+    @media only screen and (max-width: 1500px) {
+        .video-main,
+        .about,
+        .body,
+        .img-per,
+        .image-person,
+        .footer-page,
+        .about-image,
+        .image-about,
+        .pro-page-1,
+        .about-text,
+        .about-text,
+        .about-image,
+        .info,
+        .skills,
+        .bio,
+        .head-text,
+        .header,
+        .about-text-h2,
+        .about-text-p,
+        .menu,
+        .menu-b,
+        .banner,
+        .main-game,
+        .banner-image,
+        .banner-text,
+        .main {
+            width: 49.99999%;
+            margin: 0 0;
+            flex-direction: row;
+        }
+    }
+    
+    @media only screen and (max-width: 500px) {
+        .body,
+        .image-person,
+        .pro-slide,
+        .about-image,
+        .about-text,
+        .main-game,
+        .image-about,
+        .about-text-h2,
+        .about-text-p,
+        .bio,
+        .head-text,
+        .about-text,
+        .about-image,
+        .header,
+        .banner,
+        .banner-image,
+        .banner-text,
+        .container,
+        .main {
+            width: 100%;
+            height: 50%;
+            flex-direction: column;
+        }
+    }
+    
+    @media only screen and (max-width: 500px) {
+        .about
+        {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+    body {
+        background-color: var(--background-body);
+        overflow-x: hidden;
+        background-repeat: repeat-y;
+        text-align: center;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+    }
+    main{
+        width: 100%;
+        height: 800px;
+        background-color:var(--color-);
+    }
+    .head-text {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: var(--font-family);
+        color: var(--color-text-1);
+        font-weight: bolder;
+        background-repeat: repeat-x;
+        background-image: url(https://s30.picofile.com/file/8468604318/Group_2_3_.png);
+    }
+    
+    header {
+        text-align: center;
+        align-items: center;
+        z-index: 1;
+        overflow: hidden;
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        top: 0;
+        height: 70px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 5px 10px var(--color-shadow-1);
+    }
+    
+    .menu-back {
+        background-color: var(--color-1);
+        text-align: center;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    
+    .menu-b {
+        font-family: var(--font-family);
+        font-weight: bolder;
+        color: var(--color-text);
+        padding-top: 13px;
+        padding-left: 0.1px;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+    }
+    
+    .menu {
+        color: var(--color-text);
+        border-radius: 0px 24px 24px 0px;
+        background-color: var(--color-2);
+        box-shadow: 0 0 5px var(--color-shadow-1);
+        font-weight: bolder;
+        width: 20%;
+        height: 100%;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        align-items: center;
+        padding-left: 80px;
+        text-align: center;
+    }
+    
+    .menu:hover {
+        background-color: var(--color-1);
+        box-shadow: 0 0 50px var(--color-shadow-1);
+        transition: all 0.5s;
+        color: var(--color-2);
+    }
+    
+    .menu-click {
+        z-index: 2;
+        top: 0;
+        margin: 0;
+        border-radius: 0 0 24px 24px;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: x-large;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Dana;
+        line-height: normal;
+        font-style: normal;
+    }
+    
+    .sidenav {
+        font-weight: bolder;
+        font-family: dana;
+        text-align: center;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: var(--color-1);
+        overflow-x: hidden;
+        transition: all 400ms ease-in-out;
+        padding-top: 50px;
+    }
+    
+    .sidenav a {
+        text-align: center;
+        z-index: 2;
+        background-color: var(--color-1);
+        padding: 10px 10px 15px 20px;
+        text-decoration: none;
+        font-size: 30px;
+        color: #ffffff;
+        display: block;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .sidenav a:hover {
+        border: 2px solid var(--color-2);
+        color: var(--color-2);
+        background-color: var(--color-1);
+    }
+    
+    .sidenav .closebtn {
+        margin-bottom: 10px;
+        padding: 0;
+        padding-right: 10px;
+        padding-left: 10px;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        border-radius: 10%;
+        right: 20px;
+        font-size: 40px;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .link-menu {
+        padding: 0;
+        margin-top: 20px;
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+    }
+
+    /*body*/
+    .main-game{
+        width: 100%;
+        height: 200px;
+
+    }
+    .banner{
+        width: 100%;
+        height: 300px;
+        color: var(--color-text);
+        margin: 0;
+        padding: 0;
+    }
+    .banner-text{
+        overflow: hidden;
+            position: relative;
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: bolder;
+        text-shadow: 1px 1px 8px  var(--color-text-black);
+
+    }
+    .banner-image{
+        width: 100%;
+        overflow: hidden;
+        box-shadow: 1px 1px 10px var(--color-1) ;
+        filter: blur(50px);
+        transition: all 0.5s;
+    }
+    .banner-image:hover{
+        transition: all 1s;
+        filter: blur(0);
+    }
+    /*about*/
+    .about{
+        overflow: hidden;
+        display: flex;
+        width: 100%;
+        max-height:600px;
+        margin-top: 150px;
+    }
+    .about-text-h2{
+        background-color: var(--color-1);
+        text-align: center;
+        color: var(--color-text);
+        width: 100%;
+        height:60px;
+        padding-top: 1px;
+        font-size: 35px;
+        text-align: center;
+        border-radius: 24px;
+        text-shadow: 1px 1px 10px var(--color-text-black);
+    }
+    .about-text-p{
+        text-shadow: 1px 1px 10px var(--color-text-black);
+        margin-top: 5px;
+        border-radius: 24px;
+        text-align: center;
+        padding-top: 25px;
+        margin-right: 250px;
+        font-size: 10px;
+        width: 100%;
+        height:50%;
+        color: var(--color-text);
+
+
+    }
+    .about-text{
+        border-radius: 24px;
+        background-color: #0f4c75c3;
+        overflow-x: hidden;
+        height: 80%;
+        margin-top: 5px;
+        margin-right: 200px;
+        max-width: 100%;
+        box-shadow: 1px 1px 10px var(--color-text-black);
+
+    }
+    .about-image{
+        height: 100%;
+        margin-top: 50px;
+        max-width: 100%;
+    }
+    .image-about{
+        padding:auto;
+        border-radius: 14px;
+        width: 100px;
+        height: 120px;
+        filter: brightness(80%);
+        box-shadow: 1px 1px 10px var(--cSolor-text-black);
+    }
+    .download-button{
+        margin-top: 10px;
+        font-family: var(--font-family);
+        font-size: 15px;
+        text-shadow: 1px 1px 10px var(--color-1);
+        box-shadow: 1px 1px 10px var(--color-1);
+        border: #000;
+        border-radius: 24px;
+        width: 150px;
+        height: 50px;
+        margin-bottom: 10px;
+        background-color: var(--color-1);
+        color: var(--color-text);
+        text-align: center;
+    }
+    .download-button:hover{
+        transition: all 0.5s;
+        background-color: var(--color-2);
+
+    }
+    /*footer*/
+    .footer-page {
+        color: var(--color-text);
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 24px;
+        border-top-left-radius: 24px;
+        background-color: var(--color-1);
+        margin-top: 150px;
+        padding: 0;
+        padding-bottom: 50px;
+    }
+    
+    .footer-back {
+        color: var(--color-text);
+        margin-right: 200px;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-2);
+        background-color: var(--color-3);
+        border-radius: 24px;
+    }
+    
+    .social-back {
+        padding-left: 2%;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        font-style: normal;
+        color: var(--color-1);
+        font-weight: bold;
+        font-family: var(--font-family);
+        width: 100%;
+        height: 100%;
+    }
+    
+    .instagram {
+        font-size: 50px;
+        padding-right: 20px;
+    }
+    
+    .telegram {
+        padding-right: 20px;
+        font-size: 50px;
+    }
+    
+    .github {
+        padding-right: 20px;
+        font-size: 50px;
+    }
+    
+    .linkdin {
+        padding-right: 20px;
+        font-size: 50px;
+    }
+    
+    .phone {
+        font-style: normal;
+        font-size: medium;
+        color: var(--color-text);
+        font-weight: bold;
+        font-family: var(--font-family)
+    }
+    
+    .ti-fot {
+        padding-top: 10px;
+        font-size: 35px;
+        font-family: var(--font-family);
+        font-weight: bolder;
+    }
+    
+    .c-name {
+        border-radius: 10px;
+    }
+    
+    .c-name:hover {
+        transition: all 0.2s;
+        box-shadow: 0 0 10px var(--color-2);
+    }
+    
+    .c-text {
+        border-radius: 10px;
+        max-width: 300px;
+    }
+    
+    .c-text:hover {
+        transition: all 0.2s;
+        box-shadow: 0 0 10px var(--color-2);
+    }
+    
+    .btn-primary {
+        align-items: center;
+        color: var(--color-text);
+        text-align: center;
+        font-size: 20px;
+        display: flexbox;
+        border-radius: 10px;
+        width: 20%;
+        font-family: var(--font-family);
+        font-weight: bolder;
+        padding: 10px;
+        text-shadow: var(--color-1);
+        background-color: var(--color-3);
+    }
+    
+    .b-1:hover {
+        transition: all 0.2s;
+        box-shadow: 0 0 10px var(--color-2);
+    }
+</style>
+<header>
+
+    <div class="menu-back">
+        <div style="z-index: 1;" id="liveAlertPlaceholder"></div>
+
+
+        <div class="menu-b">
+            <ul class="menu" dir="rtl">
+
+                <div class="menu-click" id="main" onclick="openNav()">
+                    menu
+                </div>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a class="link-menu" href="https://erfanlab.github.io/Erfanlabbafi/">home</a>
+                        <a class="link-menu" href="#skill">skills</a>
+                        <a class="link-menu" href="#contact">contact us</a>
+                        <a class="link-menu" href="https://github.com/Erfanlab/Erfanlabbafi/blob/eeda95dfbc0439248c3af440bb8176b44da12d06/gamehtml.html">Download Game</a>
+
+                </div>
+
+            </ul>
+
+        </div>
+
+    </div>
+</header>
+<body>
+    <main>
+        <div class="main-game">
+            <div class="banner">
+                <img class="banner-image" src="https://s31.picofile.com/file/8473072150/A_work_by_Mohammad_Irfan_Labafi.gif" width="100%" height="280px" alt="image-banner">
+                <h1 class="banner-text"><img style="margin-right: 20px;width:150px;"; src="https://s31.picofile.com/file/8473071876/logo_game.png">Overtaking</h1>
+            </div>
+            <div class="about">
+                <div   class="about-text">
+                    <h2   class="about-text-h2">about</h2>
+                    <p class="about-text-p">Overtaking video game made by Mohammad Irfan Labafi using Unity game engine in 2015
+                        <br><strong>Minimum system requirements:
+                            CPU:
+                            Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHz<br>
+                            RAM:
+                            4 GB RAM<br>
+                            GPU:
+                            NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)<br>
+                            DX:
+                            10<br>
+                            OS:
+                            Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1<br>
+                            STO:
+                            1GB available space<br>
+                            Sound:
+                            100% DirectX 10 compatible</strong>
+                    </p>
+                    <a href="/images/myw3schoolsimage.jpg" download>
+                    <button class="download-button">Download</button>
+                    </a>
+                </div>
+                <div class="about-image">
+                    <img class="image-about" src="https://s31.picofile.com/file/8473071792/img1.png" alt="">
+                    <img class="image-about" src="https://s31.picofile.com/file/8473071868/img3.png" alt="">
+                    <img class="image-about" src="https://s30.picofile.com/file/8473071834/img2.png" alt="">
+                </div>
+              
+
+
+
+            </div>
+        </div>
+    </main>
+    <footer class="footer-page" id="contact">
+
+        <div class="footer-back">
+            <div class="social-back"><br>
+                <div class="instagram">
+                    <a href="">
+                        <i class="fa fa-instagram"></i>
+
+                    </a>
+
+                </div>
+                <div class="telegram">
+                    <a href="https://t.me/Erfan_MFD">
+                        <i class="fa fa-telegram"></i>
+                    </a>
+
+                </div>
+                <div class="github">
+                    <a href="https://github.com/Erfanlab/pro_quera/blob/main/index.html">
+                        <i class="fa fa-github"></i>
+
+                    </a>
+
+                </div>
+                <div class="linkdin">
+                    <a href="https://www.linkedin.com/in/mohammaderfan-labbafi-2b300b22a/">
+                        <i class="fa fa-linkedin"></i>
+
+                    </a>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="mail">
+            <div class="footer">
+                <h2 class="ti-fot">send Message</h2>
+
+                <form style="color: white;" action="mailto:erfanlab2000@gmail.com" method="post" enctype="text/plain">
+                    Your Name:<br>
+                    <input class="c-name" type="text" name="name"><br> Email:
+                    <br>
+                    <input class="c-name" type="text" name="mail"><br> Text:
+                    <br>
+                    <input class="c-text" type="text" name="comment" size="50"><br><br>
+                    <input class="btn btn-primary" id="liveAlertBtn" type="submit" value="Send">
+                    <input class="btn btn-primary" id="liveAlertBtn-1" type="reset" value="Claer">
+                    <p><a class="phone" href="tel:+989919295106"> phone number: +989919295106</a></p>
+
+
+                </form>
+
+                <p style="padding-top: 50px;">Copyright © 2023-2024 Labbafi. All rights reserved</p>
+
+            </div>
+
+        </div>
+    </footer>
+</body>
+<script>function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
+
+///old
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}</script>
+</html>

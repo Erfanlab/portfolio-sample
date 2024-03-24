@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="64x64" href="https://s31.picofile.com/file/8472913476/IMG_2308.jpeg">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://s31.picofile.com/file/8472913476/IMG_2308.jpeg">
     <!-- Square Windows tiles -->
     <meta name="msapplication-square70x70logo" content="https://s31.picofile.com/file/8472913476/IMG_2308.jpeg">
@@ -79,14 +79,41 @@
         .banner,
         .main-game,
         .banner-image,
+        .banner-game,
         .banner-text,
+        .bannerfile,
+        
+
         .main {
             width: 49.99999%;
             margin: 0 0;
             flex-direction: row;
         }
     }
+    @media only screen and (max-width: 1800px) {
     
+    .banner-game,
+    .banner-text
+
+    {
+        font-size: 35px;
+        width:70%;
+    transform: translateY(-180px)translateX(150px);
+    }
+}
+@media only screen and (max-width:500px) {
+    .banner-game,
+    .banner-image,
+    .banner-text
+    {       
+        font-size: 25px;
+        margin-left:15px;
+        max-width:90%;
+        margin-top: 40px;
+        transform: translateY(-50px);
+    }
+    
+}
     @media only screen and (max-width: 500px) {
         .body,
         .image-person,
@@ -104,8 +131,10 @@
         .header,
         .banner,
         .banner-image,
-        .banner-text,
         .container,
+        .banner-text,
+        .banner-game,
+        .bannerfile,
         .main {
             width: 100%;
             height: 50%;
@@ -285,70 +314,80 @@
     /*body*/
     .main-game{
         width: 100%;
-        height: 200px;
+        height:500px;
 
     }
     .banner{
         width: 100%;
-        height: 300px;
+        height: 450px;
         color: var(--color-text);
         margin: 0;
         padding: 0;
     }
+    .bannerfile{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        transform: translateY(-180px);
+    }
+    .banner-game{
+        overflow: hidden;
+        height: 300px;
+        border-radius: 24px;
+        box-shadow: 0 5px 5px var(--color-1);
+        padding: 0;
+    }
     .banner-text{
         overflow: hidden;
-            position: relative;
-            text-align: center;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         text-align: center;
+        color: white;
+        text-align: center;
+        margin-right: 80px;
         font-family: var(--font-family);
-        font-weight: bolder;
+        margin-top: 80px;
         text-shadow: 1px 1px 8px  var(--color-text-black);
 
     }
     .banner-image{
         width: 100%;
         overflow: hidden;
-        box-shadow: 1px 1px 10px var(--color-1) ;
-        filter: blur(50px);
-        transition: all 0.5s;
-    }
-    .banner-image:hover{
-        transition: all 1s;
-        filter: blur(0);
+        filter: blur(35px);
     }
     /*about*/
+    @media only screen and (min-width:500px) {
+        .about
+        {
+            margin-left: 200px;
+        }
+    }
     .about{
         overflow: hidden;
         display: flex;
         width: 100%;
-        max-height:600px;
-        margin-top: 150px;
+        max-height:300px;
+        margin-top: 100px;
     }
-    .about-text-h2{
-        background-color: var(--color-1);
+
+    .rightabout{
         text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        font-family: var(--font-family);
+        font-weight: lighter;
         color: var(--color-text);
-        width: 100%;
-        height:60px;
-        padding-top: 1px;
-        font-size: 35px;
-        text-align: center;
-        border-radius: 24px;
-        text-shadow: 1px 1px 10px var(--color-text-black);
+        display: grid;
+        background-color: var(--color-2);
+        height:auto;
+        width: auto;
+
     }
     .about-text-p{
-        text-shadow: 1px 1px 10px var(--color-text-black);
         margin-top: 5px;
         border-radius: 24px;
         text-align: center;
-        padding-top: 25px;
-        margin-right: 250px;
-        font-size: 10px;
+        padding: 25px;
+        margin-right: 25px;
+        font-size: 8px;
         width: 100%;
         height:50%;
         color: var(--color-text);
@@ -356,39 +395,26 @@
 
     }
     .about-text{
+        display: flex;
         border-radius: 24px;
         background-color: #0f4c75c3;
         overflow-x: hidden;
-        height: 80%;
-        margin-top: 5px;
-        margin-right: 200px;
-        max-width: 100%;
-        box-shadow: 1px 1px 10px var(--color-text-black);
-
-    }
-    .about-image{
         height: 100%;
-        margin-top: 50px;
+        margin-top: 5px;
         max-width: 100%;
-    }
-    .image-about{
-        padding:auto;
-        border-radius: 14px;
-        width: 100px;
-        height: 120px;
-        filter: brightness(80%);
-        box-shadow: 1px 1px 10px var(--cSolor-text-black);
+
     }
     .download-button{
         margin-top: 10px;
         font-family: var(--font-family);
         font-size: 15px;
+        font-weight: bold;
         text-shadow: 1px 1px 10px var(--color-1);
         box-shadow: 1px 1px 10px var(--color-1);
-        border: #000;
+        border: #aaa;
         border-radius: 24px;
-        width: 150px;
-        height: 50px;
+        width: 180px;
+        height: 40px;
         margin-bottom: 10px;
         background-color: var(--color-1);
         color: var(--color-text);
@@ -399,6 +425,30 @@
         background-color: var(--color-2);
 
     }
+    /*about images*/
+
+    .about-image{
+        height: 150px;
+        margin-top: 50px;
+        max-width: 100%;
+    }
+    
+    .image-about{
+        border-radius: 14px;
+        width: 200px;
+        height: 200px;
+        margin-left: 10px;
+        filter: brightness(80%);
+        box-shadow: 1px 1px 10px var(--cSolor-text-black);
+    }
+    @media only screen and (max-width:500px) {
+        .image-about{
+            width: 100px;
+            height: 100px;
+        }
+        
+    }
+
     /*footer*/
     .footer-page {
         color: var(--color-text);
@@ -407,23 +457,23 @@
         border-top-right-radius: 24px;
         border-top-left-radius: 24px;
         background-color: var(--color-1);
-        margin-top: 150px;
+        margin-top:300px;
         padding: 0;
         padding-bottom: 50px;
     }
     
     .footer-back {
+        overflow: hidden;
         color: var(--color-text);
         margin-right: 200px;
         width: 100%;
         height: 100%;
-        background-color: var(--color-2);
         background-color: var(--color-3);
-        border-radius: 24px;
+        border-radius:10px 10px 0 0;
     }
     
     .social-back {
-        padding-left: 2%;
+        padding-left: 20%;
         text-align: center;
         align-items: center;
         display: flex;
@@ -434,9 +484,15 @@
         width: 100%;
         height: 100%;
     }
+    @media only screen and (min-width:500px) {
+    .social-back{
+        padding-left: 42%;
+    }
+        
+    }
     
     .instagram {
-        font-size: 50px;
+        font-size: 40px;
         padding-right: 20px;
     }
     
@@ -537,14 +593,26 @@
 <body>
     <main>
         <div class="main-game">
+
             <div class="banner">
-                <img class="banner-image" src="https://s31.picofile.com/file/8473072150/A_work_by_Mohammad_Irfan_Labafi.gif" width="100%" height="280px" alt="image-banner">
-                <h1 class="banner-text"><img style="margin-right: 20px;width:150px;"; src="https://s31.picofile.com/file/8473071876/logo_game.png">Overtaking</h1>
+                <img class="banner-image" src="https://s31.picofile.com/file/8473072150/A_work_by_Mohammad_Irfan_Labafi.gif" width="100%" height="400px" alt="image-banner";>
+                <div class="bannerfile">
+                <img class="banner-game"  src="https://s31.picofile.com/file/8473072150/A_work_by_Mohammad_Irfan_Labafi.gif" alt="video">
+                <h1 class="banner-text"><img style="margin-right: 20px;width:130px;"; src="https://s31.picofile.com/file/8473071876/logo_game.png">Overtaking</h1>
+                </div>
             </div>
+        </div>
+
             <div class="about">
                 <div   class="about-text">
-                    <h2   class="about-text-h2">about</h2>
-                    <p class="about-text-p">Overtaking video game made by Mohammad Irfan Labafi using Unity game engine in 2015
+                    <div class="rightabout">
+                        <strong>Overtaking video game made by Mohammad Irfan Labafi using Unity game engine in 2015</strong>
+                         <a href="/images/myw3schoolsimage.jpg" download><button class="download-button">Download</button>
+
+                    </a>
+                    </div>
+                        
+                    <p class="about-text-p">Overtaking video game made by Mohammad Erfan Labafi using Unity game engine in 2015
                         <br><strong>Minimum system requirements:
                             CPU:
                             Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHz<br>
@@ -561,21 +629,20 @@
                             Sound:
                             100% DirectX 10 compatible</strong>
                     </p>
-                    <a href="/images/myw3schoolsimage.jpg" download>
-                    <button class="download-button">Download</button>
-                    </a>
+                   
                 </div>
-                <div class="about-image">
-                    <img class="image-about" src="https://s31.picofile.com/file/8473071792/img1.png" alt="">
-                    <img class="image-about" src="https://s31.picofile.com/file/8473071868/img3.png" alt="">
-                    <img class="image-about" src="https://s30.picofile.com/file/8473071834/img2.png" alt="">
-                </div>
+          
               
 
 
 
             </div>
+        <div class="about-image">
+            <img class="image-about" src="https://s31.picofile.com/file/8473071792/img1.png" alt="">
+            <img class="image-about" src="https://s31.picofile.com/file/8473071868/img3.png" alt="">
+            <img class="image-about" src="https://s30.picofile.com/file/8473071834/img2.png" alt="">
         </div>
+
     </main>
     <footer class="footer-page" id="contact">
 

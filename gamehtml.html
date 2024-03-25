@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="64x64" href="https://s31.picofile.com/file/8472913476/IMG_2308.jpeg">
@@ -22,7 +23,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <style>
-    :root {
+     :root {
         --color-1: #1B262C;
         --color-2: #3282B8;
         --color-3: #0F4C75;
@@ -35,7 +36,7 @@
         --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         --background-body: #6a92ad;
     }
-
+    
     @media screen and (max-height: 450px) {
         .sidenav {
             padding-top: 15px;
@@ -54,7 +55,7 @@
         }
     }
     
-    @media only screen and (max-width: 1500px) {
+    @media only screen and (max-width: 2500px) {
         .video-main,
         .about,
         .body,
@@ -82,38 +83,34 @@
         .banner-game,
         .banner-text,
         .bannerfile,
-        
-
         .main {
             width: 49.99999%;
             margin: 0 0;
             flex-direction: row;
         }
     }
-    @media only screen and (max-width: 1800px) {
     
-    .banner-game,
-    .banner-text
-
-    {
-        font-size: 35px;
-        width:70%;
-    transform: translateY(-180px)translateX(150px);
-    }
-}
-@media only screen and (max-width:500px) {
-    .banner-game,
-    .banner-image,
-    .banner-text
-    {       
-        font-size: 25px;
-        margin-left:15px;
-        max-width:90%;
-        margin-top: 40px;
-        transform: translateY(-50px);
+    @media only screen and (max-width: 2500px) {
+        .banner-game,
+        .banner-text {
+            font-size: 35px;
+            width: 70%;
+            transform: translateY(-180px)translateX(150px);
+        }
     }
     
-}
+    @media only screen and (max-width:500px) {
+        .banner-game,
+        .banner-image,
+        .banner-text {
+            font-size: 25px;
+            margin-left: 15px;
+            max-width: 90%;
+            margin-top: 40px;
+            transform: translateY(-50px);
+        }
+    }
+    
     @media only screen and (max-width: 500px) {
         .body,
         .image-person,
@@ -143,12 +140,12 @@
     }
     
     @media only screen and (max-width: 500px) {
-        .about
-        {
+        .about {
             width: 100%;
             flex-direction: column;
         }
     }
+    
     body {
         background-color: var(--background-body);
         overflow-x: hidden;
@@ -159,11 +156,13 @@
         margin: 0;
         padding: 0;
     }
-    main{
+    
+    main {
         width: 100%;
         height: 800px;
-        background-color:var(--color-);
+        background-color: var(--color-);
     }
+    
     .head-text {
         margin: 0;
         padding: 0;
@@ -310,34 +309,37 @@
         border-top-right-radius: 24px;
         border-bottom-right-radius: 24px;
     }
-
     /*body*/
-    .main-game{
+    
+    .main-game {
         width: 100%;
-        height:500px;
-
+        height: 500px;
     }
-    .banner{
+    
+    .banner {
         width: 100%;
         height: 450px;
         color: var(--color-text);
         margin: 0;
         padding: 0;
     }
-    .bannerfile{
+    
+    .bannerfile {
         width: 100%;
         height: 100%;
         display: flex;
         transform: translateY(-180px);
     }
-    .banner-game{
+    
+    .banner-game {
         overflow: hidden;
         height: 300px;
         border-radius: 24px;
         box-shadow: 0 5px 5px var(--color-1);
         padding: 0;
     }
-    .banner-text{
+    
+    .banner-text {
         overflow: hidden;
         text-align: center;
         color: white;
@@ -345,30 +347,44 @@
         margin-right: 80px;
         font-family: var(--font-family);
         margin-top: 80px;
-        text-shadow: 1px 1px 8px  var(--color-text-black);
-
+        text-shadow: 1px 1px 8px var(--color-text-black);
     }
-    .banner-image{
+    
+    .banner-image {
         width: 100%;
         overflow: hidden;
         filter: blur(35px);
     }
     /*about*/
+    
     @media only screen and (min-width:500px) {
-        .about
-        {
+        .about {
             margin-left: 200px;
         }
     }
-    .about{
+    
+    @media only screen and (min-width:1800px) {
+        .about {
+            margin-left: 550px;
+        }
+    }
+    
+    @media only screen and (max-width:800px) {
+        .about {
+            padding: 20px;
+            height: 100%;
+        }
+    }
+    
+    .about {
         overflow: hidden;
         display: flex;
         width: 100%;
-        max-height:300px;
+        max-height: 300px;
         margin-top: 100px;
     }
-
-    .rightabout{
+    
+    .rightabout {
         text-align: center;
         padding: 10px;
         font-size: 12px;
@@ -377,11 +393,12 @@
         color: var(--color-text);
         display: grid;
         background-color: var(--color-2);
-        height:auto;
+        height: auto;
         width: auto;
-
     }
-    .about-text-p{
+    
+    .about-text-p {
+        background-color: var(--color-1);
         margin-top: 5px;
         border-radius: 24px;
         text-align: center;
@@ -389,22 +406,23 @@
         margin-right: 25px;
         font-size: 8px;
         width: 100%;
-        height:50%;
+        height: 60%;
         color: var(--color-text);
-
-
     }
-    .about-text{
+    
+    .about-text {
         display: flex;
         border-radius: 24px;
-        background-color: #0f4c75c3;
+        background-color: var(--color-3);
         overflow-x: hidden;
         height: 100%;
-        margin-top: 5px;
+        width: auto;
+        margin-top: 1px;
+        margin-bottom: -5px;
         max-width: 100%;
-
     }
-    .download-button{
+    
+    .download-button {
         margin-top: 10px;
         font-family: var(--font-family);
         font-size: 15px;
@@ -420,20 +438,20 @@
         color: var(--color-text);
         text-align: center;
     }
-    .download-button:hover{
+    
+    .download-button:hover {
         transition: all 0.5s;
         background-color: var(--color-2);
-
     }
     /*about images*/
-
-    .about-image{
+    
+    .about-image {
         height: 150px;
         margin-top: 50px;
         max-width: 100%;
     }
     
-    .image-about{
+    .image-about {
         border-radius: 14px;
         width: 200px;
         height: 200px;
@@ -441,15 +459,15 @@
         filter: brightness(80%);
         box-shadow: 1px 1px 10px var(--cSolor-text-black);
     }
+    
     @media only screen and (max-width:500px) {
-        .image-about{
+        .image-about {
             width: 100px;
             height: 100px;
         }
-        
     }
-
     /*footer*/
+    
     .footer-page {
         color: var(--color-text);
         width: 100%;
@@ -457,7 +475,7 @@
         border-top-right-radius: 24px;
         border-top-left-radius: 24px;
         background-color: var(--color-1);
-        margin-top:300px;
+        margin-top: 300px;
         padding: 0;
         padding-bottom: 50px;
     }
@@ -469,7 +487,7 @@
         width: 100%;
         height: 100%;
         background-color: var(--color-3);
-        border-radius:10px 10px 0 0;
+        border-radius: 10px 10px 0 0;
     }
     
     .social-back {
@@ -484,11 +502,11 @@
         width: 100%;
         height: 100%;
     }
+    
     @media only screen and (min-width:500px) {
-    .social-back{
-        padding-left: 42%;
-    }
-        
+        .social-back {
+            padding-left: 42%;
+        }
     }
     
     .instagram {
@@ -590,30 +608,31 @@
 
     </div>
 </header>
+
 <body>
     <main>
         <div class="main-game">
 
             <div class="banner">
-                <img class="banner-image" src="https://s31.picofile.com/file/8473072150/A_work_by_Mohammad_Irfan_Labafi.gif" width="100%" height="400px" alt="image-banner";>
+                <img class="banner-image" src="https://s31.picofile.com/file/8473072150/A_work_by_Mohammad_Irfan_Labafi.gif" width="100%" height="400px" alt="image-banner" ;>
                 <div class="bannerfile">
-                <img class="banner-game"  src="https://s31.picofile.com/file/8473072150/A_work_by_Mohammad_Irfan_Labafi.gif" alt="video">
-                <h1 class="banner-text"><img style="margin-right: 20px;width:130px;"; src="https://s31.picofile.com/file/8473071876/logo_game.png">Overtaking</h1>
+                    <img class="banner-game" src="https://s31.picofile.com/file/8473072150/A_work_by_Mohammad_Irfan_Labafi.gif" alt="video">
+                    <h1 class="banner-text"><img style="margin-right: 20px;width:130px;" ; src="https://s31.picofile.com/file/8473071876/logo_game.png">Overtaking</h1>
                 </div>
             </div>
         </div>
 
-            <div class="about">
-                <div   class="about-text">
-                    <div class="rightabout">
-                        <strong>Overtaking video game made by Mohammad Irfan Labafi using Unity game engine in 2015</strong>
-                         <a href="/images/myw3schoolsimage.jpg" download><button class="download-button">Download</button>
+        <div class="about">
+            <div class="about-text">
+                <div class="rightabout">
+                    <strong>Overtaking video game made by Mohammad Irfan Labafi using Unity game engine in 2015</strong>
+                    <a href="/images/myw3schoolsimage.jpg" download><button class="download-button">Download</button>
 
                     </a>
-                    </div>
-                        
-                    <p class="about-text-p">Overtaking video game made by Mohammad Erfan Labafi using Unity game engine in 2015
-                        <br><strong>Minimum system requirements:
+                </div>
+
+                <p class="about-text-p">Overtaking video game made by Mohammad Erfan Labafi using Unity game engine in 2015
+                    <br><strong>Minimum system requirements:
                             CPU:
                             Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHz<br>
                             RAM:
@@ -628,15 +647,15 @@
                             1GB available space<br>
                             Sound:
                             100% DirectX 10 compatible</strong>
-                    </p>
-                   
-                </div>
-          
-              
-
-
+                </p>
 
             </div>
+
+
+
+
+
+        </div>
         <div class="about-image">
             <img class="image-about" src="https://s31.picofile.com/file/8473071792/img1.png" alt="">
             <img class="image-about" src="https://s31.picofile.com/file/8473071868/img3.png" alt="">
@@ -704,21 +723,24 @@
         </div>
     </footer>
 </body>
-<script>function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
+<script>
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 
 
 
-///old
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-}
+    ///old
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-}</script>
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+
 </html>

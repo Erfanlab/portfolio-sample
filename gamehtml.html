@@ -214,15 +214,14 @@
         text-align: center;
     }
     
-
-    
     .menu:hover {
         background-color: var(--color-1);
         box-shadow: 0 10px 50px var(--color-shadow-1);
         transition: all 0.5s;
         color: var(--color-2);
     }
-    .menu{
+    
+    .menu {
         border-radius: 0px 24px 24px 0px;
         width: 1%;
         height: 10%;
@@ -353,7 +352,7 @@
         flex-direction: row;
         justify-content: center;
         width: 100%;
-        max-height: 300px;
+        max-height: 500px;
         margin-top: 100px;
     }
     
@@ -458,7 +457,7 @@
         border-top-right-radius: 24px;
         border-top-left-radius: 24px;
         background-color: var(--color-1);
-        margin-top: 300px;
+        margin-top: 500px;
         padding: 0;
         padding-bottom: 50px;
     }
@@ -474,41 +473,36 @@
     }
     
     .social-back {
-        padding-left: 20%;
+        justify-content: center;
         text-align: center;
         align-items: center;
         display: flex;
         font-style: normal;
-        color: var(--color-1);
         font-weight: bold;
         font-family: var(--font-family);
         width: 100%;
         height: 100%;
     }
     
-    @media only screen and (min-width:500px) {
-        .social-back {
-            padding-left: 42%;
-        }
+    .instagram {
+        color: var(--color-text);
+        font-size: 25px;
+        padding-right: 20px;
     }
     
-    .instagram {
-        font-size: 40px;
-        padding-right: 20px;
-    }    
     .telegram {
         padding-right: 20px;
-        font-size: 50px;
+        font-size: 25px;
     }
     
     .github {
         padding-right: 20px;
-        font-size: 50px;
+        font-size: 25px;
     }
     
     .linkdin {
         padding-right: 20px;
-        font-size: 50px;
+        font-size: 25px;
     }
     
     .phone {
@@ -571,19 +565,19 @@
         <div style="z-index: 1;" id="liveAlertPlaceholder"></div>
 
 
-            <ul class="menu">
+        <ul class="menu">
 
-                <div class="fa fa-bars" style="font-size:40px; color:var(--color-text);    text-shadow: 2px 2px 5px var(--color-2); transition: all 400ms;" id="main" onclick="openNav()">
-                    
-                </div>
-                <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a class="link-menu" href="https://erfanlab.github.io/Erfanlabbafi/">Home</a>
-                    <a class="link-menu" href="#skill">MY Skills</a>
-                    <a class="link-menu" href="https://erfanlab.github.io/Erfanlabbafi/gamehtml">Download Game</a>
-                </div>
+            <div class="fa fa-bars" style="font-size:40px; color:var(--color-text);    text-shadow: 2px 2px 5px var(--color-2); transition: all 400ms;" id="main" onclick="openNav()">
 
-            </ul>
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a class="link-menu" href="https://erfanlab.github.io/Erfanlabbafi/">Home</a>
+                <a class="link-menu" href="#skill">MY Skills</a>
+                <a class="link-menu" href="https://erfanlab.github.io/Erfanlabbafi/gamehtml">Download Game</a>
+            </div>
+
+        </ul>
 
 
     </div>
@@ -649,27 +643,27 @@
             <div class="social-back"><br>
                 <div class="instagram">
                     <a href="">
-                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-instagram" style="color: var(--color-text);"></i>
 
                     </a>
 
                 </div>
                 <div class="telegram">
                     <a href="https://t.me/Erfan_MFD">
-                        <i class="fa fa-telegram"></i>
+                        <i class="fa fa-telegram" style="color: var(--color-text);"></i>
                     </a>
 
                 </div>
                 <div class="github">
                     <a href="https://github.com/Erfanlab/pro_quera/blob/main/index.html">
-                        <i class="fa fa-github"></i>
+                        <i class="fa fa-github" style="color: var(--color-text);"></i>
 
                     </a>
 
                 </div>
                 <div class="linkdin">
                     <a href="https://www.linkedin.com/in/mohammaderfan-labbafi-2b300b22a/">
-                        <i class="fa fa-linkedin"></i>
+                        <i class="fa fa-linkedin" style="color: var(--color-text);"></i>
 
                     </a>
 

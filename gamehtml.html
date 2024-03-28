@@ -24,17 +24,18 @@
 </head>
 <style>
      :root {
-        --color-1: #2F2F2F;
+        --color-1: #065471;
         --color-2: #0A91AB;
         --color-3: #0F4C75;
+        --color-4: #2F2F2F;
         --color-shadow: #0A91AB;
         --color-shadow-1: #0A91AB;
         --color-text: #fff;
         --color-text-black: #000;
-        --font-family: vazir;
+        --font-family: dana;
         --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        --background-body: #6a92ad;
+        --background-body: #111111;
     }
     
     @media screen and (max-height: 450px) {
@@ -158,9 +159,9 @@
     }
     
     main {
-        width: 100%;
-        height: 800px;
-        background-color: var(--color-);
+        margin: 10px;
+        width: auto;
+        height: 1000px;
     }
     
     .head-text {
@@ -188,12 +189,19 @@
         width: 100%;
         padding: 0;
         margin: 0;
-        box-shadow: 0 1px 10px var(--color-shadow-1);
+        box-shadow: -3px 10px 25px var(--color-shadow-1);
+        transition: all 500ms;
+    }
+    
+    header:hover {
+        box-shadow: 0 0 0 var(--color-shadow-1);
+        transition: all 500ms;
     }
     
     .menu-back {
         overflow: hidden;
         background-color: var(--color-1);
+        opacity: 85%;
         text-align: center;
         top: 0;
         padding: 0;
@@ -237,7 +245,7 @@
     
     .sidenav {
         font-weight: bolder;
-        font-family: dana;
+        font-family: var(--font-family);
         text-align: center;
         height: 100%;
         width: 0;
@@ -255,43 +263,48 @@
         text-align: center;
         z-index: 2;
         background-color: var(--color-1);
+        text-shadow: 0 2px 5px var(--color-text-black);
         padding: 10px 10px 15px 20px;
         text-decoration: none;
-        font-size: 20px;
+        box-shadow: 0 0 5px var(--color-text-black);
+        font-size: 25px;
         color: #ffffff;
         display: block;
-        transition: all 1s ease-in-out;
+        transition: all 300ms ease-in-out;
     }
     
     .sidenav a:hover {
-        border: 2px solid var(--color-2);
-        color: var(--color-2);
-        background-color: var(--color-1);
-        transition: all 1s;
+        text-shadow: 0 0 0;
+        background-color: var(--color-2);
+        transition: all 500ms;
     }
     
     .sidenav .closebtn {
+        background-color: rgb(165, 0, 0);
         margin-bottom: 10px;
         padding: 0;
         padding-right: 10px;
         padding-left: 10px;
+        justify-content: center;
         z-index: 2;
         position: absolute;
         top: 0;
-        border-radius: 10%;
+        border-radius: 5%;
+        text-shadow: 0 2px 5px var(--color-text-black);
         right: 20px;
-        font-size: 40px;
+        font-size: 35px;
         margin: 0;
         text-align: center;
     }
     
     .link-menu {
         padding: 0;
-        margin-top: 20px;
-        border-radius: 24px;
-        transition: all 1s;
+        margin-top: 10px;
+        border-radius: 10px;
+        transition: all 400ms;
     }
-    /*body*/
+    /* هدر برای تمامی صفحات یکسان ثبت شده*/
+    /*body(این بخش برای فقط صفحه گیم طراحی شده )*/
     
     .main-game {
         width: 100%;
@@ -300,7 +313,7 @@
     
     .banner {
         width: 100%;
-        height: 450px;
+        height: 520px;
         color: var(--color-text);
         margin: 0;
         padding: 0;
@@ -308,9 +321,14 @@
     
     .bannerfile {
         width: 100%;
-        height: 100%;
         display: flex;
-        transform: translateY(-200px);
+        transform: translateY(-250px);
+    }
+    
+    @media only screen and (max-width:500px) {
+        .bannerfile {
+            height: 75%;
+        }
     }
     
     .banner-game {
@@ -318,21 +336,29 @@
         height: 348px;
         width: 800px;
         border-radius: 24px;
-        box-shadow: 0 5px 5px var(--color-1);
+        box-shadow: 0 1px 30px var(--color-1);
         padding: 0;
     }
     
     @media only screen and (max-width:500px) {
         .banner-game {
-            width: 400px;
-            height: 388px;
+            width: 350px;
+            height: 290px;
         }
     }
     
-    @media only screen and (min-width:550px) and ( max-width:1000px) {
+    @media only screen and (min-width:550px) and ( max-width:900px) {
         .banner-game {
-            width: 480px;
-            height: 210px;
+            margin-left: -100px;
+            width: 500px;
+            height: 208px;
+        }
+    }
+    
+    @media only screen and (min-width:1000px) {
+        .banner-game {
+            width: 886px;
+            height: 380px;
         }
     }
     
@@ -343,20 +369,30 @@
         text-align: center;
         margin-right: 80px;
         font-family: var(--font-family);
-        margin-top: 100px;
+        margin-top: 60px;
         text-shadow: 1px 1px 8px var(--color-text-black);
+        font-weight: bolder;
+    }
+    
+    @media only screen and (min-width:1005px) {
+        .banner-text {
+            font-size: 50px;
+            margin-top: 120px;
+            margin-right: 200px;
+        }
     }
     
     @media only screen and (min-width:550px) and (max-width:1000px) {
         .banner-text {
             margin-right: 150px;
-            font-size: 20px;
+            font-size: 30px;
         }
     }
     
     @media only screen and (max-width:500px) {
         .banner-text {
-            margin-top: 40px;
+            margin-top: 50px;
+            font-size: 20px;
         }
     }
     
@@ -373,7 +409,13 @@
     
     @media only screen and (min-width:550px) and (max-width:1000px) {
         .banner-text-image {
-            width: 100px;
+            width: 120px;
+        }
+    }
+    
+    @media only screen and (min-width:1050px) {
+        .banner-text-image {
+            width: 165px;
         }
     }
     
@@ -382,14 +424,7 @@
         overflow: hidden;
         filter: blur(35px);
     }
-    /*about*/
-    
-    @media only screen and (max-width:800px) {
-        .about {
-            padding: 20px;
-            height: 100%;
-        }
-    }
+    /*about (بخش توضیحات بیشتر و لینک دانلود )*/
     
     .about {
         overflow: hidden;
@@ -398,7 +433,32 @@
         justify-content: center;
         width: 100%;
         max-height: 500px;
-        margin-top: 100px;
+    }
+    
+    @media only screen and (max-width:500px) {
+        .about {
+            margin: 0;
+            padding: 15px;
+            height: 100%;
+        }
+    }
+    
+    @media only screen and (min-width:550px) and (max-width:1000px) {
+        .about {
+            height: 23%;
+            padding: 5px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+    
+    @media only screen and (min-width:1005px) {
+        .about {
+            padding: 120px;
+            padding-left: 380px;
+            padding-right: 380px;
+            height: 100%;
+        }
     }
     
     .rightabout {
@@ -434,10 +494,10 @@
     }
     
     .about-text {
-        box-shadow: 1px 1px 10px var(--color-1);
+        box-shadow: 0 1px 30px var(--color-1);
         display: flex;
         border-radius: 24px;
-        background-color: var(--color-1);
+        background-color: var(--color-4);
         overflow-x: hidden;
         height: 100%;
         width: auto;
@@ -612,7 +672,7 @@
 
         <ul class="menu">
 
-            <div class="fa fa-bars" style="font-size:40px; color:var(--color-text);    text-shadow: 2px 2px 5px var(--color-2); transition: all 400ms;" id="main" onclick="openNav()">
+            <div class="fa fa-bars" style="font-size:40px; color:var(--color-text);    text-shadow: 2px 2px 5px var(--color-shadow-1); transition: all 400ms;" id="main" onclick="openNav()">
 
             </div>
             <div id="mySidenav" class="sidenav">

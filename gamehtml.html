@@ -310,17 +310,32 @@
         width: 100%;
         height: 100%;
         display: flex;
-        transform: translateY(-180px);
+        transform: translateY(-200px);
     }
     
     .banner-game {
         overflow: hidden;
-        height: 300px;
+        height: 348px;
+        width: 800px;
         border-radius: 24px;
         box-shadow: 0 5px 5px var(--color-1);
         padding: 0;
     }
+    @media only screen  and (max-width:500px){
+        .banner-game{
+            width: 400px;
+            height: 388px;
+        }
+        
+    }
     
+    @media only screen  and (min-width:550px) and ( max-width:1000px){
+        .banner-game{
+            width: 480px;
+            height: 210px;
+        }
+        
+    }
     .banner-text {
         overflow: hidden;
         text-align: center;
@@ -328,10 +343,36 @@
         text-align: center;
         margin-right: 80px;
         font-family: var(--font-family);
-        margin-top: 80px;
+        margin-top: 100px;
         text-shadow: 1px 1px 8px var(--color-text-black);
     }
-    
+    @media only screen and (min-width:550px) and (max-width:1000px) {
+        .banner-text{
+            margin-right: 150px;
+            font-size: 20px;
+        }
+        
+    }
+    @media only screen  and (max-width:500px){
+        .banner-text{
+            margin-top: 40px;
+        }
+    }
+        .banner-text-image{
+            margin-right: 20px;
+            width:130px;
+        }
+        @media only screen  and (max-width:500px){
+            .banner-text-image{
+                width: 80px;
+            }
+            
+        }
+        @media only screen  and (min-width:550px) and (max-width:1000px) {
+            .banner-text-image{
+                width: 100px;
+            }
+        }
     .banner-image {
         width: 100%;
         overflow: hidden;
@@ -588,10 +629,10 @@
         <div class="main-game">
 
             <div class="banner">
-                <img class="banner-image" src="https://s31.picofile.com/file/8473072150/A_work_by_Mohammad_Irfan_Labafi.gif" width="100%" height="400px" alt="image-banner" ;>
+                <img class="banner-image" src="https://s31.picofile.com/file/8473891734/%DB%B2%DB%B4%DB%B5%DB%B9%DB%B7%DB%B7%DB%B7%DB%B5_online_video_cutter_com_2_.gif" width="100%" height="500px" alt="image-banner" ;>
                 <div class="bannerfile">
-                    <img class="banner-game" src="https://s31.picofile.com/file/8473072150/A_work_by_Mohammad_Irfan_Labafi.gif" alt="video">
-                    <h1 class="banner-text"><img style="margin-right: 20px;width:130px;" ; src="https://s31.picofile.com/file/8473071876/logo_game.png">Overtaking</h1>
+                    <video class="banner-game" src="https://s30.picofile.com/d/8473891226/14157871-316b-49d0-8f42-dd5619130071/A_work_by_Mohammad_Irfan_Labafi.mp4" controls muted alt="video"></video>
+                    <h1 class="banner-text"><img class="banner-text-image" src="https://s31.picofile.com/file/8473071876/logo_game.png">Overtaking</h1>
                 </div>
             </div>
         </div>

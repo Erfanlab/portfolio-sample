@@ -451,6 +451,7 @@
             height: 100%;
         }
     }
+    
     @media only screen and (min-width:2005px) {
         .about {
             padding: 120px;
@@ -459,6 +460,7 @@
             height: 100%;
         }
     }
+    
     .rightabout {
         text-align: center;
         padding: 20px;
@@ -490,18 +492,19 @@
         height: 60%;
         color: var(--color-text);
     }
+    
     @media only screen and (max-width:500px) {
-            .about-text-p{  
-                margin-top: 8px;
-                margin-bottom: 10px;
-                border-radius: 24px;
-                text-align: center;
-                padding: 10px;
-                margin-right: 25px;
-                font-size: 10px;
-
-            }
+        .about-text-p {
+            margin-top: 8px;
+            margin-bottom: 10px;
+            border-radius: 24px;
+            text-align: center;
+            padding: 10px;
+            margin-right: 25px;
+            font-size: 10px;
+        }
     }
+    
     .about-text {
         box-shadow: 0 1px 30px var(--color-1);
         display: flex;
@@ -549,41 +552,43 @@
         margin-top: 50px;
         max-width: 100%;
     }
+    
     @media only screen and (max-width:500px) {
         .about-image {
             height: 240px;
             overflow-y: hidden;
             overflow-x: scroll;
-            flex-direction: column;    
-        
+            flex-direction: column;
         }
     }
-    @media only screen and (min-width:505px) and (max-width:950px){
+    
+    @media only screen and (min-width:505px) and (max-width:950px) {
         .about-image {
             height: 350px;
             overflow-y: hidden;
             overflow-x: scroll;
-            flex-direction: column;    
-        
+            flex-direction: column;
         }
     }
-    @media only screen and (min-width:955px) and (max-width:2000px) {
+    
+    @media only screen and (min-width:955px) and (max-width:1900px) {
         .about-image {
             padding-left: 650px;
             align-items: center;
             justify-content: center;
-            flex-direction: row;    
-        
+            flex-direction: row;
         }
     }
-    @media only screen and (max-width:2000px) {
+    
+    @media only screen and (min-width:1905px) {
         .about-image {
-
-            flex-direction: row;    
-        
+            padding-left: 900px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
         }
     }
-  
+    
     .image-about {
         border-radius: 14px;
         width: 200px;
@@ -592,56 +597,59 @@
         filter: brightness(80%);
         box-shadow: 1px 1px 10px var(--cSolor-text-black);
     }
-    @media only screen and (min-width:2005px){
-        .image-about{
-            box-shadow: 0 1px 10px var(--color-2);
-            filter: brightness(30%);
-            width: 100px;
-            height: 180px;
-            transition: all 500ms
-
-        }
-        
-    }
-
-    @media only screen and (min-width:955px) and (max-width:2000px) {
-        .image-about{
+    
+    @media only screen and (min-width:1905px) {
+        .image-about {
             box-shadow: 0 1px 100px var(--color-2);
             filter: brightness(40%);
             width: 250px;
             height: 300px;
             transition: all 500ms;
-
         }
-        .image-about:hover{
+        .image-about:hover {
             box-shadow: 0 1px 15px var(--color-2);
             filter: brightness(1);
             width: 850px;
             margin-right: 50px;
-            margin-left:50px ;
+            margin-left: 50px;
             transition: all 1s;
-    
         }
-        
     }
+    
+    @media only screen and (min-width:955px) and (max-width:1900px) {
+        .image-about {
+            box-shadow: 0 1px 100px var(--color-2);
+            filter: brightness(40%);
+            width: 250px;
+            height: 300px;
+            transition: all 500ms;
+        }
+        .image-about:hover {
+            box-shadow: 0 1px 15px var(--color-2);
+            filter: brightness(1);
+            width: 850px;
+            margin-right: 50px;
+            margin-left: 50px;
+            transition: all 1s;
+        }
+    }
+    
     @media only screen and (min-width:505px) and (max-width:950px) {
-        .image-about{
+        .image-about {
             box-shadow: 0 1px 10px var(--color-2);
             filter: brightness(30%);
             width: 350px;
             height: 250px;
             transition: all 500ms;
-
         }
-        .image-about:hover{
+        .image-about:hover {
             box-shadow: 0 1px 30px var(--color-2);
             filter: brightness(1);
             width: 850px;
             transition: all 500ms;
-    
         }
-        
     }
+    
     @media only screen and (max-width:500px) {
         .image-about {
             box-shadow: 0 1px 10px var(--color-2);
@@ -650,15 +658,13 @@
             height: 180px;
             transition: all 500ms;
         }
-        .image-about:hover{
+        .image-about:hover {
             box-shadow: 0 1px 30px var(--color-2);
             filter: brightness(1);
             width: 250px;
             transition: all 500ms
-    
         }
     }
-
     /*footer for all pages*/
     
     .footer-page {
@@ -770,6 +776,7 @@
         box-shadow: 0 0 10px var(--color-2);
     }
     /*buttom- back-top*/
+    
     #myBtn {
         display: none;
         position: fixed;
@@ -789,9 +796,6 @@
     #myBtn:hover {
         background-color: var(--color-2);
     }
-
-    
-    
 </style>
 <header>
 
@@ -934,27 +938,27 @@
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <script>
- // Get the button
- let mybutton = document.getElementById("myBtn");
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
 
- // When the user scrolls down 20px from the top of the document, show the button
- window.onscroll = function() {
-     scrollFunction()
- };
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction()
+    };
 
- function scrollFunction() {
-     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-         mybutton.style.display = "block";
-     } else {
-         mybutton.style.display = "none";
-     }
- }
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
 
- // When the user clicks on the button, scroll to the top of the document
- function topFunction() {
-     document.body.scrollTop = 0;
-     document.documentElement.scrollTop = 0;
- }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 
 
 

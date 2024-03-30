@@ -28,17 +28,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
          :root {
-            --color-1: #1B262C;
-            --color-2: #3282B8;
+            --color-1: #065471;
+            --color-2: #0A91AB;
             --color-3: #0F4C75;
-            --color-shadow: #3282B8;
-            --color-shadow-1: #BBE1FA;
+            --color-4: #2F2F2F;
+            --color-shadow: #0A91AB;
+            --color-shadow-1: #0A91AB;
             --color-text: #fff;
             --color-text-black: #000;
-            --font-family: vazir;
+            --font-family: dana;
             --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            --background-body: #6a92ad;
+            --background-body: #111111;
         }
         
         @media screen and (max-height: 450px) {
@@ -131,26 +132,6 @@
             }
         }
         
-        #myBtn {
-            display: none;
-            position: fixed;
-            bottom: 30px;
-            left: 20px;
-            z-index: 99;
-            font-size: 18px;
-            border: none;
-            outline: none;
-            background-color: var(--color-1);
-            color: white;
-            cursor: pointer;
-            padding: 15px;
-            border-radius: 10px;
-        }
-        
-        #myBtn:hover {
-            background-color: var(--color-2);
-        }
-        
         body {
             background-color: var(--background-body);
             overflow-x: hidden;
@@ -160,6 +141,12 @@
             left: 0;
             margin: 0;
             padding: 0;
+        }
+        
+        main {
+            margin: 10px;
+            width: auto;
+            height: 1000px;
         }
         
         .head-text {
@@ -183,14 +170,15 @@
             position: sticky;
             left: 0;
             top: 0;
-            height: 70px;
+            height: 50px;
             width: 100%;
             padding: 0;
             margin: 0;
-            box-shadow: 0 5px 10px var(--color-shadow-1);
+            box-shadow: -3px 10px 25px var(--color-shadow-1);
         }
         
         .menu-back {
+            overflow: hidden;
             background-color: var(--color-1);
             text-align: center;
             top: 0;
@@ -202,6 +190,7 @@
         }
         
         .menu-b {
+            z-index: 2;
             font-family: var(--font-family);
             font-weight: bolder;
             color: var(--color-text);
@@ -212,82 +201,65 @@
             text-align: center;
         }
         
-        .menu {
-            color: var(--color-text);
-            border-radius: 0px 24px 24px 0px;
-            background-color: var(--color-2);
-            box-shadow: 0 0 5px var(--color-shadow-1);
-            font-weight: bolder;
-            width: 20%;
-            height: 100%;
-            margin: 0;
-            top: 0;
-            bottom: 0;
-            align-items: center;
-            padding-left: 80px;
-            text-align: center;
-        }
-        
         .menu:hover {
             background-color: var(--color-1);
-            box-shadow: 0 0 50px var(--color-shadow-1);
+            box-shadow: 0 10px 50px var(--color-shadow-1);
             transition: all 0.5s;
             color: var(--color-2);
         }
         
-        .menu-click {
-            z-index: 2;
-            top: 0;
+        .menu {
+            border-radius: 0px 24px 24px 0px;
+            width: 1%;
+            height: 10%;
             margin: 0;
-            border-radius: 0 0 24px 24px;
-            padding-top: 0;
-            padding-bottom: 0;
-            font-size: x-large;
-            text-align: center;
+            top: 0;
+            bottom: 0;
             align-items: center;
-            width: 100%;
-            height: 100%;
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            font-family: Dana;
-            line-height: normal;
-            font-style: normal;
+            padding-left: 10px;
+            padding-top: 5px;
+            text-align: center;
+            transition: all 1s;
         }
         
         .sidenav {
             font-weight: bolder;
-            font-family: dana;
+            font-family: var(--font-family);
             text-align: center;
             height: 100%;
             width: 0;
             position: fixed;
-            z-index: 1;
+            z-index: 2;
             top: 0;
             left: 0;
             background-color: var(--color-1);
             overflow-x: hidden;
-            transition: all 400ms ease-in-out;
+            transition: all 300ms ease-in-out;
             padding-top: 50px;
         }
         
         .sidenav a {
             text-align: center;
-            z-index: 2;
+            z-index: 1;
             background-color: var(--color-1);
+            text-shadow: 0 2px 5px var(--color-text-black);
             padding: 10px 10px 15px 20px;
             text-decoration: none;
-            font-size: 30px;
+            box-shadow: 0 0 5px var(--color-text-black);
+            font-size: 25px;
             color: #ffffff;
             display: block;
-            transition: all 0.3s ease-in-out;
+            transition: all 300ms;
         }
         
         .sidenav a:hover {
-            border: 2px solid var(--color-2);
-            color: var(--color-2);
-            background-color: var(--color-1);
+            text-shadow: 0 0 0;
+            background-color: var(--color-2);
+            transition: all 500ms;
         }
         
         .sidenav .closebtn {
+            background-color: rgb(165, 0, 0);
             margin-bottom: 10px;
             padding: 0;
             padding-right: 10px;
@@ -295,50 +267,166 @@
             z-index: 2;
             position: absolute;
             top: 0;
-            border-radius: 10%;
+            border-radius: 15%;
+            text-shadow: 0 2px 5px var(--color-text-black);
             right: 20px;
-            font-size: 40px;
+            font-size: 35px;
             margin: 0;
             text-align: center;
         }
         
         .link-menu {
             padding: 0;
-            margin-top: 20px;
-            border-top-right-radius: 24px;
-            border-bottom-right-radius: 24px;
+            margin-top: 10px;
+            border-radius: 10px;
+            transition: all 400ms;
         }
         /*menu*/
         
         .bio {
+            font-family: var(--font-family);
             overflow: visible;
-            margin-top: 50px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 150px;
-            padding: 0;
             text-align: center;
-            width: 80%;
-            height: 600px;
+            justify-content: center;
+        }
+        
+        @media only screen and (max-width:500px) {
+            .bio {
+                font-size: 10px;
+                z-index: 99;
+                margin-top: 150px;
+                padding-left: 25px;
+                padding-right: 25px;
+                width: 100%;
+                height: 500px;
+            }
+        }
+        
+        @media only screen and (min-width:505px) and (max-width:950px) {
+            .bio {
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 10px;
+                margin-top: 25px;
+                margin-bottom: 100px;
+                padding-left: 50px;
+                padding-right: 50px;
+                width: 100%;
+                height: 300px;
+            }
+        }
+        
+        @media only screen and (min-width:955px) and (max-width:1950px) {
+            .bio {
+                font-size: small;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                padding-left: 300px;
+                padding-right: 300px;
+                margin-top: 150px;
+                margin-bottom: 150px;
+                width: 100%;
+                height: 600px;
+            }
+        }
+        
+        @media only screen and (min-width:1955px) {
+            .bio {
+                font-size: small;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                padding-left: 300px;
+                padding-right: 300px;
+                margin-top: 150px;
+                margin-bottom: 150px;
+                width: 100%;
+                height: 550px;
+            }
         }
         
         .bio-text {
             max-height: fit-content;
             width: fit-content;
-            border-radius: 24px;
+            border-radius: 0 24px 24px 0;
             font-style: normal;
             text-align: center;
-            box-shadow: 1px 1px 5px var(--color-3);
+            box-shadow: 1px 1px 30px var(--color-3);
             font-family: var(--font-family);
             background-color: var(--color-3);
         }
         
+        @media only screen and (max-width:500px) {
+            .bio-text {
+                margin-top: 1px;
+                max-height: 170px;
+                width: fit-content;
+                border-radius: 24px;
+            }
+        }
+        
+        @media only screen and (min-width:505px) and (max-width:950px) {
+            .bio-text {
+                max-height: fit-content;
+                width: fit-content;
+                border-radius: 24px;
+            }
+        }
+        
+        @media only screen and (min-width:955px) and (max-width:1950px) {
+            .bio-text {
+                max-height: fit-content;
+                width: fit-content;
+                border-radius: 24px;
+            }
+        }
+        
+        @media only screen and (min-width:1995px) {
+            .bio-text {
+                max-height: fit-content;
+                width: fit-content;
+                border-radius: 24px;
+            }
+        }
+        
         .bio-text-note {
-            margin-top: 100px;
+            margin-top: 200px;
             margin-bottom: 100px;
             margin-left: 50px;
             margin-right: 50px;
             text-align: center;
+        }
+        
+        @media only screen and (max-width:500px) {
+            .bio-text-note {
+                margin-top: 8px;
+                font-size: 10px;
+            }
+        }
+        
+        @media only screen and (min-width:505px) and (max-width:950px) {
+            .bio-text-note {
+                margin-top: 70px;
+                font-size: 12px;
+            }
+        }
+        
+        @media only screen and (min-width:955px) and (max-width:1950px) {
+            .bio-text-note {
+                margin-top: 150px;
+                font-size: 20px;
+            }
+        }
+        
+        @media only screen and (min-width:1990px) {
+            .bio-text-note {
+                margin-top: 200px;
+                font-size: 10px;
+            }
         }
         
         .strong-text {
@@ -367,12 +455,12 @@
             font-family: var(--font-family);
             color: var(--color-text);
             width: 100%;
-            height: 100%;
+            height: 85%;
         }
         
         .image-person {
             border-top-left-radius: 24PX;
-            padding-top: 40px;
+            padding-top: 10px;
             margin: 0;
             box-shadow: 0 5px 10px var(--color-1);
             border-top-right-radius: 24px;
@@ -382,13 +470,20 @@
             align-items: center;
             background-color: var(--color-2);
             width: 100%;
-            max-height: 60%;
+            max-height: 55%;
+        }
+        
+        @media screen and (max-width:950px) {
+            .image-person {
+                width: 100%;
+                height: 35%;
+            }
         }
         
         .image-person-text {
             text-shadow: 1px 5px 10px var(--color-text-black);
             font-family: var(--font-family);
-            padding-top: 20px;
+            padding-top: 10px;
         }
         
         .img-per {
@@ -404,22 +499,34 @@
         .img-per:hover {
             transition: all 1s;
             border-radius: 360px;
-            box-shadow: 0 0 20px 30px var(--color-3);
+            box-shadow: 0 1px 50px var(--color-4);
         }
         
         .img-text {
             background-color: var(--color-2);
             text-shadow: 1px 5px 10px var(--color-text-black);
-            padding-top: 10px;
+            padding-top: 0.5px;
             margin-top: 10px;
-            border-radius: 150px;
+            border-radius: 15px;
             font-family: var(--font-family);
             font-size: x-small;
             width: 100%;
             height: 15%;
         }
         
+        @media screen and (max-width:950px) {
+            .img-text {
+                height: 25%;
+            }
+        }
+        
+        .h2-info {
+            margin-top: 10px;
+            font-size: 25px;
+        }
+        
         .email {
+            font-size: 15px;
             color: var(--color-2);
             text-shadow: 0 0 10px var(--color-2);
             padding-top: 1px;
@@ -438,38 +545,97 @@
             align-items: center;
             padding: 0;
             width: 100%;
-            margin-bottom: 200px;
+            margin-bottom: 20px;
             max-height: 800px;
         }
         
         .skills {
-            margin-left: auto;
-            margin-right: auto;
             display: flex;
-            height: 100%;
-            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media only screen and (max-width:500px) {
+            .skills {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        @media only screen and (min-width:505px) and (max-width:950px) {
+            .skills {
+                margin-right: auto;
+                margin-left: auto;
+                margin-bottom: 100px;
+                width: 50%;
+                height: auto;
+            }
+        }
+        
+        @media only screen and (min-width:955px) and (max-width:1950px) {
+            .skills {
+                margin-right: auto;
+                margin-left: auto;
+                margin-bottom: 200px;
+                width: 40%;
+                height: auto;
+            }
+        }
+        
+        @media only screen and (min-width:1990px) {
+            .skills {
+                margin-right: auto;
+                margin-left: auto;
+                margin-bottom: 200px;
+                width: 40%;
+                height: auto;
+            }
         }
         
         .carousel-caption {
-            max-width: 100%;
-            height: 130px;
-            font-size: 10px;
+            font-size: 12px;
             align-items: center;
-            border-radius: 80px;
-            background-color: #3282b8d2;
+            justify-content: center;
+            border-radius: 10px;
+            background-color: var(--color-4);
+            opacity: 80%;
             box-shadow: 5px 5px 10px var(--color-1);
-            font-weight: bolder;
             font-family: var(--font-family);
-            color: var(--color-text-black);
+            color: var(--color-text);
             text-shadow: 1px 1px 10px var(--text-shadow);
             transition: all 0.5s;
         }
         
-        .carousel-caption:hover {
-            font-size: 0;
-            transition: all 300ms;
-            background-color: #3282b842;
-            box-shadow: 0 0 0 0;
+        @media only screen and (max-width:500px) {
+            .carousel-caption {
+                padding: 5px;
+                width: auto;
+                height: auto;
+            }
+        }
+        
+        @media only screen and (min-width:505px) and (max-width:950px) {
+            .carousel-caption {
+                padding: 5px;
+                width: auto;
+                height: auto;
+            }
+        }
+        
+        @media only screen and (min-width:955px) and (max-width:1950px) {
+            .carousel-caption {
+                padding: 5px;
+                width: auto;
+                height: auto;
+            }
+        }
+        
+        @media only screen and (min-width:1990px) {
+            .carousel-caption {
+                padding: 5px;
+                width: auto;
+                height: auto;
+            }
         }
         /*video*/
         
@@ -552,28 +718,27 @@
             border-top-right-radius: 24px;
             border-top-left-radius: 24px;
             background-color: var(--color-1);
-            margin-top: 300px;
+            margin-top: 500px;
             padding: 0;
             padding-bottom: 50px;
         }
         
         .footer-back {
+            overflow: hidden;
             color: var(--color-text);
             margin-right: 200px;
             width: 100%;
             height: 100%;
-            background-color: var(--color-2);
             background-color: var(--color-3);
-            border-radius: 24px;
+            border-radius: 10px 10px 0 0;
         }
         
         .social-back {
-            padding-left: 2%;
+            justify-content: center;
             text-align: center;
             align-items: center;
             display: flex;
             font-style: normal;
-            color: var(--color-1);
             font-weight: bold;
             font-family: var(--font-family);
             width: 100%;
@@ -581,23 +746,24 @@
         }
         
         .instagram {
-            font-size: 50px;
+            color: var(--color-text);
+            font-size: 25px;
             padding-right: 20px;
         }
         
         .telegram {
             padding-right: 20px;
-            font-size: 50px;
+            font-size: 25px;
         }
         
         .github {
             padding-right: 20px;
-            font-size: 50px;
+            font-size: 25px;
         }
         
         .linkdin {
             padding-right: 20px;
-            font-size: 50px;
+            font-size: 25px;
         }
         
         .phone {
@@ -653,6 +819,27 @@
             transition: all 0.2s;
             box-shadow: 0 0 10px var(--color-2);
         }
+        /*buttom- back-top*/
+        
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: var(--color-4);
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        #myBtn:hover {
+            background-color: var(--color-2);
+        }
     </style>
 </head>
 
@@ -666,24 +853,20 @@
             <div style="z-index: 1;" id="liveAlertPlaceholder"></div>
 
 
-            <div class="menu-b">
-                <ul class="menu" dir="rtl">
+            <ul class="menu">
 
-                    <div class="menu-click" id="main" onclick="openNav()">
-                        menu
-                    </div>
-                    <div id="mySidenav" class="sidenav">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <a class="link-menu" href="https://erfanlab.github.io/Erfanlabbafi/">home</a>
-                        <a class="link-menu" href="#skill">skills</a>
-                        <a class="link-menu" href="#contact">contact us</a>
-                        <a class="link-menu" href="https://erfanlab.github.io/Erfanlabbafi/gamehtml">Download Game</a>
+                <div class="fa fa-bars" style="font-size:40px; color:var(--color-text);    text-shadow: 2px 2px 5px var(--color-shadow-1); transition: all 400ms;" id="main" onclick="openNav()">
 
-                    </div>
+                </div>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a class="link-menu" href="https://erfanlab.github.io/Erfanlabbafi/">Home</a>
+                    <a class="link-menu" href="#skill">MY Skills</a>
+                    <a class="link-menu" href="https://erfanlab.github.io/Erfanlabbafi/gamehtml">Download Game</a>
+                </div>
 
-                </ul>
+            </ul>
 
-            </div>
 
         </div>
     </header>
@@ -700,10 +883,10 @@
 
                     </div>
                     <div class="img-text">
-                        <h2>Front-End Developer</h2>
+                        <h2 class="h2-info">Front-End Developer</h2>
                         <h6>location : Iran,Tehran</h6>
                         <br><br><br><br>
-                        <span>Fueled by a constant desire for continuous learning,
+                        <span class="span-info">Fueled by a constant desire for continuous learning,
                                      I actively seek new opportunities in the<strong class="strong-text"> JavaScript,Web-Developer </strong>
                                     to contribute to personal and 
                                     professional growth by expanding knowledge and expertise.
@@ -838,27 +1021,27 @@
             <div class="social-back"><br>
                 <div class="instagram">
                     <a href="">
-                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-instagram" style="color: var(--color-text);"></i>
 
                     </a>
 
                 </div>
                 <div class="telegram">
                     <a href="https://t.me/Erfan_MFD">
-                        <i class="fa fa-telegram"></i>
+                        <i class="fa fa-telegram" style="color: var(--color-text);"></i>
                     </a>
 
                 </div>
                 <div class="github">
                     <a href="https://github.com/Erfanlab/pro_quera/blob/main/index.html">
-                        <i class="fa fa-github"></i>
+                        <i class="fa fa-github" style="color: var(--color-text);"></i>
 
                     </a>
 
                 </div>
                 <div class="linkdin">
                     <a href="https://www.linkedin.com/in/mohammaderfan-labbafi-2b300b22a/">
-                        <i class="fa fa-linkedin"></i>
+                        <i class="fa fa-linkedin" style="color: var(--color-text);"></i>
 
                     </a>
 
@@ -925,7 +1108,7 @@
 
     ///old
     function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenav").style.width = "300px";
         document.getElementById("main").style.marginLeft = "250px";
     }
 

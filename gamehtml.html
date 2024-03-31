@@ -555,11 +555,18 @@
     
     @media only screen and (max-width:500px) {
         .about-image {
-            width: 100%;
+            margin-left: 65px;
+            width: 70%;
             height: 400px;
             overflow-y: scroll;
             overflow-x: hidden;
             flex-direction: column;
+            transition: all 500ms;
+        }
+        .about-image:hover {
+            margin-left: 50px;
+            width: 80%;
+            transition: all 500ms;
         }
     }
     
